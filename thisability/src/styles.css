@@ -8,30 +8,39 @@
   font-family: 'Poppins', sans-serif;
 }
 body {
-  background-color: #FFF9F2;
+  background-color: #FFFFFF;
 }
 
 label {
   margin-bottom: 0px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 200;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 0px;
+}
+h1 {
+  line-height: 70px;
 }
 
 .Rubik-500{
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  margin-bottom: 0px;
 }
+
+.Rubik-700{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
 .title {
   letter-spacing: 0;
   align-self: center;
   align-items: center;
+  font-weight: 700;
 }
 
 
@@ -39,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #F21646;
 }
 
-.white {
+.cream {
   color: #FFF9F2;
 }
 
@@ -192,13 +201,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 50px;
 }
 
+.margin-left-xxxl {
+  margin-left: 70px;
+}
+.margin-right-xxxl {
+  margin-right: 70px;
+}
+.margin-top-xxxl {
+  margin-top: 70px;
+}
+.margin-bottom-xxxl {
+  margin-bottom: 70px;
+}
+.margin-all-xxxl {
+  margin: 70px;
+}
+
 .btn {
   border-radius: 9999px;
   font-family: 'Rubik', sans-serif;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-  padding: 9px 35px 9px 35px;
-  font-weight: 400;
-  letter-spacing: 1px;
+  padding: 15px 45px 15px 45px;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 2px;
 }
 
 .btn:hover {

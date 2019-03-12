@@ -1,6 +1,6 @@
 
 .half-viewport {
-  height: 550px;
+  height: 700px;
 }
 
 .slider {
@@ -26,4 +26,8 @@
   margin: 0;
   position: absolute;
   top: 30%;
+}
+
+.magna {
+  margin-top: 75px;
 }

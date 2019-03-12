@@ -1,8 +1,8 @@
 .header {
   width: 100%;
-  height: 65px;
+  height: 100px;
   background-color: #FFD20A;
-  background-image: linear-gradient(#FFD20A, #FFDB3B, #FFED9D, #FFF9F2, #FFF9F2, #FFF9F2);
+  background-image: linear-gradient(#FFD20A, #FFF6CE, #FFFFFF);
 }
 
 .max-height {
