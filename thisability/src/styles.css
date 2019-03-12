@@ -1,0 +1,176 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+}
+
+.red {
+  color: #F21646;
+}
+
+.white {
+  color: #FFF9F2;
+}
+
+.yellow {
+  color: #FFD20A;
+}
+
+.black {
+  color: #1F1D1B;
+}
+
+.blue {
+  color: #8CCCF5;
+}
+
+.bg-red {
+  background-color: #F21646;
+}
+
+.bg-white {
+  background-color: #FFF9F2;
+}
+
+.bg-yellow {
+  background-color: #FFD20A;
+}
+
+.bg-black {
+  background-color: #1F1D1B;
+}
+
+.bg-blue {
+  background-color: #8CCCF5;
+}
+
+
+.text-sm {
+  font-size: 16px;
+}
+
+.text-md {
+  font-size: 18px;
+}
+
+.text-lg {
+  font-size: 30px;
+}
+
+.text-xl {
+  font-size: 60px;
+}
+
+.text-xxl {
+  font-size: 80px;
+}
+
+.padding-left-sm {
+  padding-left: 5px;
+}
+.padding-right-sm {
+  padding-right: 5px;
+}
+.padding-top-sm {
+  padding-top: 5px;
+}
+.padding-bottom-sm {
+  padding-bottom: 5px;
+}
+.padding-all-sm {
+  padding: 5px;
+}
+
+.padding-left-md {
+  padding-left: 16px;
+}
+.padding-right-md {
+  padding-right: 16px;
+}
+.padding-top-md {
+  padding-top: 16px;
+}
+.padding-bottom-md {
+  padding-bottom: 16px;
+}
+.padding-all-md {
+  padding: 16px;
+}
+
+.margin-left-sm {
+  margin-left: 5px;
+}
+.margin-right-sm {
+  margin-right: 5px;
+}
+.margin-top-sm {
+  margin-top: 5px;
+}
+.margin-bottom-sm {
+  margin-bottom: 5px;
+}
+.margin-all-sm {
+  margin: 5px;
+}
+
+.margin-left-md {
+  margin-left: 16px;
+}
+.margin-right-md {
+  margin-right: 16px;
+}
+.margin-top-md {
+  margin-top: 16px;
+}
+.margin-bottom-md {
+  margin-bottom: 16px;
+}
+.margin-all-md {
+  margin: 16px;
+}
+
+.btn {
+  border-radius: 9999px;
+  font-family: 'Rubik', sans-serif;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 9px 35px 9px 35px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #FFF9F2;
+}
+
+.btn-red {
+  background-color: #F21646;
+  color: #FFF9F2;
+}
+
+.btn-red:active {
+  color: #FFD20A;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-yellow {
+  background-color: #FFD20A;
+  color: #FFF9F2;
+}
+
+.btn-yellow:active {
+  color: #F21646;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
+
