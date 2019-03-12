@@ -1,7 +1,8 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import url('//fonts.googleapis.com/css?family=Rubik:400,500,700,900');
-@import url('//fonts.googleapis.com/css?family=Poppins:100,200,300,400');
-
+/* @import url('//fonts.googleapis.com/css?family=Rubik:400,500,700,900');
+@import url('//fonts.googleapis.com/css?family=Poppins:100,200,300,400'); */
+@import "typeface-rubik";
+@import "typeface-poppins";
 
 * {
   font-family: 'Poppins', sans-serif;

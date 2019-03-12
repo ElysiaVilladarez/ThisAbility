@@ -32,6 +32,8 @@
     "express": "^4.16.4",
     "path": "^0.12.7",
     "rxjs": "6.0.0",
+    "typeface-poppins": "0.0.72",
+    "typeface-rubik": "0.0.72",
     "typescript": "~2.7.2",
     "zone.js": "^0.8.26"
   },
