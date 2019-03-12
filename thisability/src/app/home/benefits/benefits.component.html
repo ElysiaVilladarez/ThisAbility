@@ -1,3 +1,23 @@
-<p>
-  benefits works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center margin-bottom-xl">
+      <h1 class="text-xl margin-top-xl margin-bottom-md red">Benefits</h1>
+      <h4 class="black">20% discount and VAT exemption</h4>
+      <label>You are entitled to a 20% discount and VAT exemption<br>in the following services:</label>
+    </div>
+  </div>
+  <div>
+  <div class="row">
+    <div class="offset-md-1 col-md-10">
+      <div class="row">
+        <div *ngFor="let b of benefitsArray; let i = index;" class="col-md-4 text-center margin-bottom-xxl">
+          <div class="benefit-item">
+          <img src="{{b.imgUrl}}"/>
+          <div class="Rubik-500" innerHtml="{{b.caption}}">{{ b.caption }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

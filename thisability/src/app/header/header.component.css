@@ -12,3 +12,12 @@
 .center-vertical {
   align-items: center;
 }
+
+img {
+  border-radius: 50%;
+  border: solid 1px #1F1D1B;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+}
+
