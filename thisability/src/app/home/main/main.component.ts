@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) document) { }
 
   ngOnInit() {
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    const element = document.getElementById('header');
+     if (window.pageYOffset > 0) {
+       element.classList.add('sticky');
+     } else {
+      element.classList.remove('sticky');
+     }
   }
 
 }

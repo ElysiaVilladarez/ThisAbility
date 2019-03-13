@@ -1,8 +1,12 @@
-.benefit-item img {
-  height: 250px;
-  width: 250px;
+.benefit20-item img {
+  height: 350px;
+  width: 100%
 }
 
+.benefit5-item img {
+  height: 300px;
+  width: 100%
+}
 .tracking-wide {
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }

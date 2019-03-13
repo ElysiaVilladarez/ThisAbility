@@ -9,6 +9,7 @@
 }
 body {
   background-color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 label {
@@ -36,6 +37,16 @@ h1 {
   font-weight: 700;
 }
 
+.Poppins-400{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.Poppins-500{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
 .title {
   letter-spacing: 0;
   align-self: center;
@@ -57,7 +68,7 @@ h1 {
 }
 
 .black {
-  color: #1F1D1B;
+  color: #292929;
 }
 
 .blue {
@@ -90,7 +101,7 @@ h1 {
 }
 
 .text-md {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .text-lg {
@@ -257,5 +268,13 @@ h1 {
 
 .full-height {
   height: 100%;
+}
+
+.float-right {
+  float: right;
+}
+
+.pointer {
+  cursor: pointer;
 }
 

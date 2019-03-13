@@ -1,17 +1,17 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 text-center margin-bottom-xl">
-      <h1 class="text-xl margin-top-xl margin-bottom-md red">Benefits</h1>
-      <h4 class="black tracking-wide">20% discount and VAT exemption</h4>
+  <div class="row margin-bottom-xl margin-top-xxxl">
+    <div class="col-md-12 text-center">
+      <h1 class="text-xxl margin-bottom-md red">Benefits</h1>
+      <h4 class="black tracking-wide text-lg">20% discount and VAT exemption</h4>
       <label>You are entitled to a 20% discount and VAT exemption<br>in the following services:</label>
     </div>
   </div>
-  <div>
+
   <div class="row">
     <div class="offset-md-1 col-md-10">
       <div class="row">
-        <div *ngFor="let b of benefitsArray; let i = index;" class="col-md-4 text-center margin-bottom-xxl">
-          <div class="benefit-item">
+        <div *ngFor="let b of benefitsArray20; let i = index;" class="col-md-4 margin-bottom-xxl">
+          <div class="benefit20-item text-center">
           <img src="{{b.imgUrl}}"/>
           <div class="Rubik-500" innerHtml="{{b.caption}}">{{ b.caption }}</div>
           </div>
@@ -19,5 +19,25 @@
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row margin-top-xxxl margin-bottom-xxl">
+      <div class="col-md-12 text-center">
+        <h4 class="black tracking-wide text-lg">5% discount</h4>
+        <label>You are entitled to a 5% discount in the following services:</label>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="offset-md-1 col-md-10">
+        <div *ngFor="let b of benefitsArray5; let i = index;" class="row margin-bottom-xxxl">
+          <div class="col-md-12 margin-bottom-xxl">
+            <div class="benefit5-item text-center">
+            <img src="{{b.imgUrl}}"/>
+            <label class="red Rubik-500">{{b.caption}}</label>
+            <div class="text-md Poppins-400" innerHtml="{{b.description}}">{{ b.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
