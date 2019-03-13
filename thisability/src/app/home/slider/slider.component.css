@@ -10,13 +10,6 @@
   background-position: center;
 }
 
-.magna-photo {
-  background: url(../../../assets/bg-placeholder.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .center {
   height: 100%;
   position: relative;
@@ -30,4 +23,9 @@
 
 .magna {
   margin-top: 75px;
+}
+
+.magna-slider img {
+  height: 100%;
+  width: 100%;
 }
