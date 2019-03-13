@@ -1,8 +1,6 @@
 #header {
   width: 100%;
   height: 95px;
-  background-color: #FFD20A;
-  background-image: linear-gradient(#FFD20A, #FFF6CE, #FFFFFF);
   z-index: 100;
 }
 
@@ -17,13 +15,12 @@
 img {
   border-radius: 50%;
   border: solid 1px #1F1D1B;
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
   background-color: white;
 }
 
 .sticky {
-  background: #fff;
   /* box-shadow: 0 3px 6px 0 rgba(0,0,0,.08); */
   position: sticky;
   top: 0;

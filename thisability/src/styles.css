@@ -6,6 +6,7 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  color: #1F1D1B;
 }
 
 a.red:hover, a.red:active {
@@ -27,15 +28,16 @@ label {
   margin-bottom: 0px;
   font-size: 20px;
   font-weight: 200;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 0px;
 }
 h1 {
-  line-height: 70px;
+  line-height: 65px;
 }
 
 .Rubik-500{
@@ -48,6 +50,10 @@ h1 {
   font-weight: 700;
 }
 
+.Poppins-300{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
 .Poppins-400{
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -62,7 +68,7 @@ h1 {
   letter-spacing: 0;
   align-self: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 
@@ -90,7 +96,7 @@ h1 {
   background-color: #F21646;
 }
 
-.bg-white {
+.bg-cream {
   background-color: #FFF9F2;
 }
 
@@ -107,8 +113,12 @@ h1 {
 }
 
 
-.text-sm {
+.text-xs {
   font-size: 16px;
+}
+
+.text-sm {
+  font-size: 18px;
 }
 
 .text-md {
@@ -116,7 +126,7 @@ h1 {
 }
 
 .text-lg {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .text-xl {
@@ -329,8 +339,11 @@ h1 {
   cursor: pointer;
 }
 
-
 .tracking-wide {
   letter-spacing: 2px;
+}
+
+.display-block {
+  display: block;
 }
 

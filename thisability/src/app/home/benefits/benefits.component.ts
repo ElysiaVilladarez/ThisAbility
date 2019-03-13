@@ -15,45 +15,45 @@ export class BenefitsComponent implements OnInit {
     this.benefitsArray20 = [
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'hotels and similar lodging<br>establishments'
+      caption: 'Hotels and Similar Lodging<br>Establishments'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'restaurants'
+      caption: 'Restaurants'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'recreation centers'
+      caption: 'Recreation Centers'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'theaters and other similar<br>places of culture, leisure and<br>amusement'
+      caption: 'Theaters and Other Similar<br>Places of Culture, Leisure<br>and Amusement'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'medicine'
+      caption: 'Medicine'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'medical and dental services'
+      caption: 'Medical and Dental Services'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'domestic air and sea travel'
+      caption: 'Domestic Air and Sea Travel'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'public railways, skyways, and<br>other public utility vehicles'
+      caption: 'Public Railways, Skyways,<br>and Other Public Utility<br>Vehicles'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'funeral and burial services for<br>the death of the PWD'
+      caption: 'Funeral and bBurial sServices<br>for the Death of the PWD'
     }];
 
     this.benefitsArray5 = [
       {
         imgUrl: '../../../assets/bg-placeholder.png',
-        caption: 'basic necessities such as:',
+        caption: 'BASIC NECESSITIES SUCH AS:',
         description: `rice, corn, bread, fresh or dried and canned fish and other marine products, fresh pork, beef<br>
         and poultry meat, fresh eggs, fresh and processed milk, infant formula, fresh vegetables, root<br>
         crops, coffee, sugar, cooking oil, salt, laundry soap, detergents, firewood, charcoal, candles<br>
@@ -62,7 +62,7 @@ export class BenefitsComponent implements OnInit {
       },
       {
         imgUrl: '../../../assets/bg-placeholder.png',
-        caption: 'prime commodities such as:',
+        caption: 'PRIME COMMODITIES SUCH AS:',
         description: `fresh fruits, dried or processed or canned pork, beef and poultry, meat, dairy products not falling under basic<br>
         necessities, noodles, onions, garlic, diapers, herbicides, poultry, swine and cattle feeds, veterinary products<br>
         for poultry, swine and cattle feeds, veterinary products for poultry, swine and cattle, paper, school supplies,<br>
