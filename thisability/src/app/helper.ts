@@ -7,4 +7,10 @@ export class Helper {
       scrollTop: parseInt($('#about').offset().top, 10) - 70
     }, 1000);
   }
+
+  scrollToTop() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 0);
+  }
 }

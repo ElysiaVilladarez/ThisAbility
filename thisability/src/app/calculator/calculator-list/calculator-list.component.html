@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+  <div class="row text-center margin-top-xl margin-bottom-xl">
+    <div class="col-md-12">
+      <h1 class="text-xl red margin-top-xxl">Discount Calculator</h1>
+      <h4 class="black margin-top-lg margin-bottom-sm">Still don't think it's worth it to register?</h4>
+      <label class="Poppins-400">Find out how much you could be saving in your groceries, transportation,<br>
+          medicine, and recreational expenses using the discount calculator.</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let c of calculatorArray; let i = index;" class="col-md-6 margin-bottom-xxl">
+      <div class="text-center" [ngClass]="{'float-right padding-right-xxl': i%2 === 0, 'float-left padding-left-xxl': i%2 !== 0 }">
+        <h4 class="tracking-wide black margin-top-xl margin-bottom-sm">{{c.caption}}</h4>
+        <img src="{{c.imgUrl}}">
+      </div>
+    </div>
+  </div>
+</div>

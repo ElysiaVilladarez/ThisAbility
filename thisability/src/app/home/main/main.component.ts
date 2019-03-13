@@ -8,19 +8,8 @@ import { DOCUMENT } from '@angular/platform-browser';
 })
 export class MainComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) document) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e) {
-    const element = document.getElementById('header');
-     if (window.pageYOffset > 0) {
-       element.classList.add('sticky');
-     } else {
-      element.classList.remove('sticky');
-     }
-  }
-
 }

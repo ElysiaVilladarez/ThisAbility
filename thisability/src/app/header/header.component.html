@@ -9,9 +9,15 @@
           </div>
           <div class="col-md-6">
             <div class="row">
-              <div class="offset-md-1 col-md-2"><h5 class="red Rubik-700 pointer" (click)="goToAbout()">about</h5></div>
-              <div class="col-md-4"><h5 class="red Rubik-700 pointer">discount calculator</h5></div>
-              <div class="col-md-4"><h5 class="red Rubik-700 pointer">registration process</h5></div>
+              <div class="offset-md-1 col-md-2">
+                <label class="red Rubik-700 text-md pointer" (click)="goToAbout()">about</label>
+              </div>
+              <div class="col-md-4">
+                  <a class="red Rubik-700 text-md" routerLink="/calculator">discount calculator</a>
+              </div>
+              <div class="col-md-4">
+                <a class="red Rubik-700 text-md" routerLink="/registration-process">registration process</a>
+              </div>
             </div>
           </div>
         </div>

@@ -7,6 +7,8 @@ import { SliderComponent } from './home/slider/slider.component';
 import { BenefitsComponent } from './home/benefits/benefits.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CalculatorListComponent } from './calculator/calculator-list/calculator-list.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { FooterComponent } from './footer/footer.component';
     SliderComponent,
     BenefitsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CalculatorListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

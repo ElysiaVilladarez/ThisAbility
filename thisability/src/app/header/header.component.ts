@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
 import { Helper } from '../helper';
+import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -9,16 +10,48 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   helper: Helper = new Helper();
-  constructor() { }
+  isInHome = true;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+      }
+
+      if (event instanceof NavigationEnd) {
+          this.helper.scrollToTop();
+          // Hide loading indicator
+          switch (event.url) {
+            case '/calculator': {
+              this.isInHome = false;
+              break;
+            }
+            default: {
+              this.isInHome = true;
+              break;
+            }
+          }
+      }
+
+      if (event instanceof NavigationError) {
+          // Hide loading indicator
+
+          // Present error to user
+          console.log(event.error);
+      }
+    });
   }
 
   ngAfterViewInit() {
   }
 
   goToAbout() {
-    this.helper.goToAbout();
+    if (this.isInHome) {
+      this.helper.goToAbout();
+    } else {
+      this.router.navigateByUrl('/home');
+    }
   }
 
 }
