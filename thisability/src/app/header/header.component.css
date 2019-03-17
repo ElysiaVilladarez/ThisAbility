@@ -20,12 +20,4 @@ img {
   background-color: white;
 }
 
-.sticky {
-  /* box-shadow: 0 3px 6px 0 rgba(0,0,0,.08); */
-  position: sticky;
-  top: 0;
-  height: 120px;
-  width: 100%;
-}
-
 

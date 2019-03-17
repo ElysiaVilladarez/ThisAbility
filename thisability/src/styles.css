@@ -8,7 +8,10 @@
   font-family: 'Poppins', sans-serif;
   color: #1F1D1B;
 }
-
+a, label.pointer {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 a.red:hover, a.red:active {
   text-decoration: none;
   color: #F21646;
@@ -19,6 +22,12 @@ a.yellow:hover, a.yellow:active {
   color: #FFD20A;
 }
 
+input {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
 body {
   background-color: #FFFFFF;
   overflow-x: hidden;
@@ -27,13 +36,12 @@ body {
 label {
   margin-bottom: 0px;
   font-size: 20px;
-  font-weight: 200;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 0px;
 }
 h1 {
@@ -50,6 +58,11 @@ h1 {
   font-weight: 700;
 }
 
+.Poppins-200{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
 .Poppins-300{
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -64,13 +77,27 @@ h1 {
   font-weight: 500;
 }
 
+.Poppins-600{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+
+.Poppins-700{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
 .title {
   letter-spacing: 0;
   align-self: center;
   align-items: center;
-  font-weight: 500;
+  font-weight: 700;
 }
 
+.white {
+  color: #FFFFFF;
+}
 
 .red {
   color: #F21646;
@@ -169,6 +196,22 @@ h1 {
 }
 .padding-all-md {
   padding: 16px;
+}
+
+.padding-left-lg {
+  padding-left: 28px;
+}
+.padding-right-lg {
+  padding-right: 28px;
+}
+.padding-top-lg {
+  padding-top: 28px;
+}
+.padding-bottom-lg {
+  padding-bottom: 28px;
+}
+.padding-all-lg {
+  padding: 28px;
 }
 
 
@@ -289,10 +332,19 @@ h1 {
   border-radius: 9999px;
   font-family: 'Rubik', sans-serif;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-  padding: 15px 45px 15px 45px;
   font-weight: 500;
-  font-size: 24px;
   letter-spacing: 2px;
+}
+
+.btn-xl {
+  padding: 15px 45px 15px 45px;
+  font-size: 24px;
+}
+
+.btn-default {
+  min-height: 47px;
+  min-width: 113px;
+  font-size: 20px;
 }
 
 .btn:hover {
@@ -347,3 +399,29 @@ h1 {
   display: block;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.rounded-edges {
+  border-radius: 9999px;
+}
+
+.card {
+  border-radius: 35px;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.13), 0 3px 4px rgba(0,0,0,0.13);
+}
+
+
+
+.sticky {
+  /* box-shadow: 0 3px 6px 0 rgba(0,0,0,.08); */
+  position: sticky;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
+
+.display-inline-block {
+  display: inline-block;
+}

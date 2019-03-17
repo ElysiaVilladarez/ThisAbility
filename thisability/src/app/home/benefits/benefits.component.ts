@@ -47,7 +47,7 @@ export class BenefitsComponent implements OnInit {
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Funeral and bBurial sServices<br>for the Death of the PWD'
+      caption: 'Funeral and Burial Services<br>for the Death of the PWD'
     }];
 
     this.benefitsArray5 = [

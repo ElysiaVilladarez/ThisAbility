@@ -1,7 +1,19 @@
-img {
-  border-radius: 50%;
-  border: solid 1px #1F1D1B;
-  width: 275px;
-  height: 275px;
+#total-calculator {
+  z-index: 100;
+}
+
+#total-calculator input {
+  width: 100%;
+  height: 57px;
+  border-radius: 15px;
+  border: none;
   background-color: white;
+}
+
+#total-calculator hr {
+  border-top: solid 1px;
+}
+
+.discount-calculator {
+  background-image: linear-gradient(#FFF9F2, white);
 }

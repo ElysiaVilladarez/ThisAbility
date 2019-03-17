@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-1">
+    <h1 class="text-xl red margin-top-md">{{ label }}</h1>
+  </div>
+</div>
+<div class="row margin-top-md bg-cream card padding-top-lg padding-left-xxl padding-right-xxl padding-bottom-sm">
+    <div class="col-md-12">
+        <h4 class="red text-lg margin-bottom-md">ITEMS</h4>
+          <div *ngFor="let f of listOfPrices; let i = index;">
+            <app-calculator-row [index]="i" (removingRow)="removeRow($event)" (priceChanging)="priceChanged($event)"></app-calculator-row>
+          </div>
+    </div>
+</div>
+
+<div class="row margin-top-md margin-bottom-md margin-bottom-xxl">
+    <div class="col-md-12">
+        <button class="btn btn-default btn-yellow margin-right-md" (click)="addRow()">add</button>
+        <button class="btn btn-default btn-red" (click)="reset()">reset</button>
+    </div>
+</div>
+

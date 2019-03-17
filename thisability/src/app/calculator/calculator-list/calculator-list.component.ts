@@ -10,22 +10,28 @@ export class CalculatorListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.calculatorArray = [{
-      imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Grocery'
-    },
-    {
-      imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Transportation'
-    },
-    {
-      imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Medicine'
-    },
-    {
-      imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Recreational'
-    }];
+    this.calculatorArray = [
+      {
+        label: 'Grocery',
+        total: 0,
+        discountPercentage: .05
+      },
+      {
+        label: 'Transportation',
+        total: 0,
+        discountPercentage: .20
+      },
+      {
+        label: 'Medicine',
+        total: 0,
+        discountPercentage: .20
+      },
+      {
+        label: 'Recreational',
+        total: 0,
+        discountPercentage: .05
+      }
+    ];
   }
 
 }

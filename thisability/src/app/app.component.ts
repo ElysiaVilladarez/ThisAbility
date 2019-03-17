@@ -20,6 +20,15 @@ export class AppComponent {
      } else {
       element.classList.remove('sticky');
      }
+
+
+    const element2 = document.getElementById('total-calculator');
+    if (element2 && (window.pageYOffset + element.offsetHeight) > (element2.scrollHeight - element.offsetHeight)) {
+      element2.classList.add('sticky');
+      element2.style.top = element.offsetHeight + 'px';
+    } else if (element2) {
+     element2.classList.remove('sticky');
+    }
   }
 
 }

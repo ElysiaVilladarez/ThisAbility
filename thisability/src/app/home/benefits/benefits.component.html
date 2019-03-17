@@ -1,9 +1,8 @@
-<div class="container-fluid">
-  <div class="row margin-bottom-xl margin-top-xxxl">
+<div class="row margin-bottom-xl margin-top-xxxl">
     <div class="col-md-12 text-center">
       <h1 class="text-xl margin-bottom-xl red">Benefits</h1>
       <h4 class="tracking-wide text-lg margin-bottom-sm">20% DISCOUNT AND VAT EXEMPTION</h4>
-      <label class="text-sm">You are entitled to a 20% discount and VAT exemption in the following services:</label>
+      <label class="text-xs">You are entitled to a 20% discount and VAT exemption in the following services:</label>
     </div>
   </div>
 
@@ -13,7 +12,7 @@
         <div *ngFor="let b of benefitsArray20; let i = index;" class="col-md-4 margin-bottom-xxl">
           <div class="benefit20-item text-center">
           <img src="{{b.imgUrl}}"/>
-          <div class="Rubik-500 text-md" innerHtml="{{b.caption}}">{{ b.caption }}</div>
+          <div class="Poppins-600 text-xs" innerHtml="{{b.caption}}">{{ b.caption }}</div>
           </div>
         </div>
       </div>
@@ -23,7 +22,7 @@
   <div class="row margin-top-xxxl margin-bottom-xxl">
       <div class="col-md-12 text-center">
         <h4 class="black tracking-wide text-lg">5% DISCOUNT</h4>
-        <label>You are entitled to a 5% discount in the following services:</label>
+        <label class="text-xs Poppins-300 margin-top-sm">You are entitled to a 5% discount in the following services:</label>
       </div>
     </div>
 
@@ -33,11 +32,10 @@
           <div class="col-md-12 margin-bottom-xxl">
             <div class="benefit5-item text-center">
             <img src="{{b.imgUrl}}"/>
-            <label class="Rubik-500 margin-all-sm text-md">{{b.caption}}</label>
-            <div class="text-md" innerHtml="{{b.description}}">{{ b.description }}</div>
+            <label class="Poppins-600 margin-all-md text-xs">{{b.caption}}</label>
+            <div class="text-xs Poppins-300" innerHtml="{{b.description}}">{{ b.description }}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-</div>

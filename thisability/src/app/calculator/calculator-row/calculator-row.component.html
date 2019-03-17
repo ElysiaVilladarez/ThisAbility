@@ -1,0 +1,11 @@
+<div class="row margin-top-sm margin-bottom-lg">
+  <div class="col-md-7 padding-right-sm margin-bottom-sm">
+    <input type="text" placeholder="ITEM NAME" class="rounded-edges" value="{{ itemName }}">
+  </div>
+  <div class="col-md-4 padding-right-sm margin-bottom-sm">
+      <input type="number" placeholder="PRICE" class="rounded-edges" value="{{ itemPrice }}" (keyup)="onPriceChanged($event)">
+    </div>
+  <div class="col-md-1 center">
+    <i class="fa fa-2x fa-minus-circle red pointer" aria-hidden="true" (click)="removeRow()"></i>
+    </div>
+</div>
