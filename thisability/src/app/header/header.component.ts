@@ -27,6 +27,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
               this.isInHome = false;
               break;
             }
+            case '/registration-process': {
+              this.isInHome = false;
+              break;
+            }
             default: {
               this.isInHome = true;
               break;

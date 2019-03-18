@@ -4,10 +4,25 @@
 }
 
 .slider {
-  background: url(../../../assets/bg-placeholder.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider .text {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.slider .tag {
+  align-items: flex-start;
+  text-align: start;
 }
 
 .center {
@@ -18,7 +33,7 @@
 .center div {
   margin: 0;
   position: absolute;
-  top: 20%;
+  top: 35%;
 }
 
 .magna {
@@ -29,4 +44,16 @@
 .magna-slider img {
   height: 100%;
   width: 100%;
+}
+
+
+.center-magna {
+  height: 100%;
+  position: relative;
+}
+
+.center-magna div {
+  margin: 0;
+  position: absolute;
+  top: 20%;
 }

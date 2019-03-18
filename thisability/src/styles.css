@@ -119,6 +119,10 @@ h1 {
   color: #8CCCF5;
 }
 
+.gray {
+  color: #CCCCCC;
+}
+
 .bg-red {
   background-color: #F21646;
 }
@@ -139,6 +143,9 @@ h1 {
   background-color: #8CCCF5;
 }
 
+.text-small {
+  font-size: 14px;
+}
 
 .text-xs {
   font-size: 16px;
@@ -424,4 +431,14 @@ h1 {
 
 .display-inline-block {
   display: inline-block;
+}
+
+
+img.logo {
+  width: 40px;
+  height: 55px;
+}
+
+img.brand {
+  height: 17px;
 }
