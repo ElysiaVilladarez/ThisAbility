@@ -13,6 +13,8 @@ import { CalculatorListComponent } from './calculator/calculator-list/calculator
 import { CalculatorItemComponent } from './calculator/calculator-item/calculator-item.component';
 import { CalculatorRowComponent } from './calculator/calculator-row/calculator-row.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

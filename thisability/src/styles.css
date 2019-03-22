@@ -222,6 +222,23 @@ h1 {
 }
 
 
+.padding-left-xl {
+  padding-left: 35px;
+}
+.padding-right-xl {
+  padding-right: 35px;
+}
+.padding-top-xl {
+  padding-top: 34px;
+}
+.padding-bottom-xl {
+  padding-bottom: 35px;
+}
+.padding-all-xl {
+  padding: 35px;
+}
+
+
 
 .padding-left-xxl {
   padding-left: 48px;

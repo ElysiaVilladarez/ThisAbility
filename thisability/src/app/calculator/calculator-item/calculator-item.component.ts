@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator-item',
@@ -8,34 +9,51 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CalculatorItemComponent implements OnInit {
   @Input() index;
   @Input() label: String;
-  listOfPrices = [];
+
+  @Input() formGroup: FormGroup;
+
+  @Output() totalPriceChanging = new EventEmitter();
+
+
+  keys: string[] = [];
+  keyCounter = 0;
 
   constructor() { }
 
   ngOnInit() {
-    this.addRow();
+    this.reset();
   }
 
   addRow() {
-    this.listOfPrices.push(0);
+    this.keyCounter++;
+    this.keys.push(this.keyCounter.toString());
+    this.formGroup.addControl(this.keyCounter.toString(), new FormControl());
   }
 
-  removeRow(index: number) {
-    this.listOfPrices.splice(index, 1);
+  removeRow(key: string) {
+    this.formGroup.removeControl(key);
+    this.keys = Object.keys(this.formGroup.controls);
 
-    if (this.listOfPrices.length === 0) {
+    if (this.keys.length === 0) {
       this.addRow();
     }
+
   }
 
   reset() {
-    this.listOfPrices = [];
+    this.keys = [];
+    this.totalPriceChanging.emit({ index: this.index, totalPrice: 0 } );
+    this.formGroup = new FormGroup({});
     this.addRow();
-  }
+    this.formGroup.valueChanges.subscribe((value) => {
+      let totalPrice = 0;
+      this.keys.forEach(k => {
+        if (this.formGroup.controls[k]) {
+          totalPrice += parseFloat(this.formGroup.controls[k].value) || 0;
+        }
+      });
 
-  priceChanged(event) {
-    console.log(event);
-    this.listOfPrices[event.index] = event.price;
-    console.log(this.listOfPrices);
+      this.totalPriceChanging.emit({ index: this.index, totalPrice: totalPrice } );
+    });
   }
 }

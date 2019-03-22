@@ -3,11 +3,11 @@
     <h1 class="text-xl red margin-top-md">{{ label }}</h1>
   </div>
 </div>
-<div class="row margin-top-md bg-cream card padding-top-lg padding-left-xxl padding-right-xxl padding-bottom-sm">
+<div class="row margin-top-md bg-cream card padding-top-lg padding-left-xl padding-right-xxl padding-bottom-sm">
     <div class="col-md-12">
         <h4 class="red text-lg margin-bottom-md">ITEMS</h4>
-          <div *ngFor="let f of listOfPrices; let i = index;">
-            <app-calculator-row [index]="i" (removingRow)="removeRow($event)" (priceChanging)="priceChanged($event)"></app-calculator-row>
+          <div *ngFor="let f of keys; let i = index;">
+            <app-calculator-row [form]="formGroup.controls[f]" [index]="f" (removingRow)="removeRow($event)"></app-calculator-row>
           </div>
     </div>
 </div>

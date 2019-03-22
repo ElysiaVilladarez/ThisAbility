@@ -11,61 +11,61 @@
   </div>
 
   <div class="row margin-top-lg">
-    <div class="offset-md-1 col-md-10">
+    <div class="offset-md-2 col-md-8">
       <hr>
     </div>
   </div>
 
   <div class="row margin-top-xxxl">
-    <div class="offset-md-1 col-md-10">
+    <div class="offset-md-2 col-md-8">
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-6">
           <div class="row margin-bottom-md" *ngFor="let c of calculatorArray; let i = index;">
             <div class="col-md-12">
-              <app-calculator-item [index]="i" [label]= "c.label"></app-calculator-item>
+              <app-calculator-item [index]="i" [label]= "c.label" (totalPriceChanging)="computeForDiscount($event)"></app-calculator-item>
             </div>
           </div>
         </div>
-        <div class="col-md-5 padding-left-xxl">
+        <div class="offset-md-1 col-md-5">
         <div class="row">
             <div class="col-md-1">
               <h1 class="text-xl red margin-top-md">&nbsp; </h1>
             </div>
           </div>
           <div id="total-calculator" >
-          <div class="bg-red card margin-top-md padding-all-xxl">
+          <div class="bg-red card margin-top-sm padding-all-lg">
             <div class="row">
-              <h4 class="col-md-6 Poppins-600 white text-sm">EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
+              <h4 class="offset-md-1 col-md-5 Poppins-600 white text-sm">EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
               <h4 class="col-md-6 Poppins-600 white text-sm">DISCOUNTED <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
             </div>
             <div class="margin-top-md" *ngFor="let c of calculatorArray; let i = index;">
               <div class="row margin-bottom-xs">
-                <div class="col-md-6">
-                    <label class="Poppins-200 text-xs white">{{ c.label }}</label>
+                <div class="offset-md-1 col-md-5">
+                    <label class="Poppins-200 text-xs white small" [textMask]="{ mask: currencyMask }">{{ c.label }}</label>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
-                    <input class="text-xs Poppins-200">
+                <div class="offset-md-1 col-md-5">
+                    <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.total.toLocaleString() }}">
                 </div>
-                <div class="col-md-6">
-                    <input class="text-xs Poppins-200">
+                <div class="col-md-5">
+                    <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.discount.toLocaleString() }}">
                 </div>
               </div>
             </div>
-            <div class="row margin-top-lg margin-bottom-lg">
-              <div class="col-md-12">
+            <div class="row margin-top-sm margin-bottom-sm">
+              <div class="offset-md-1 col-md-10">
                 <hr class="white">
               </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-12">
+                <div class="offset-md-1 col-md-10">
                     <h4 class="Poppins-600 white text-sm tracking-wide">TOTAL EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
                 </div>
             </div>
             <div class="row margin-top-sm margin-bottom-lg">
-                <div class="col-md-12">
-                    <input class="text-xs Poppins-200">
+                <div class="offset-md-1 col-md-10">
+                    <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedTotalExpenses}}">
                 </div>
             </div>
             <div class="row text-center">
@@ -74,8 +74,8 @@
                 </div>
             </div>
             <div class="row margin-top-sm">
-                <div class="col-md-12">
-                    <input class="text-xs Poppins-200">
+                <div class="offset-md-1 col-md-10">
+                    <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedDiscountedExpenses}}">
                 </div>
             </div>
           </div>
