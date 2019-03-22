@@ -42,7 +42,6 @@
 }
 
 .magna-slider img {
-  height: 100%;
   width: 100%;
 }
 
@@ -55,5 +54,5 @@
 .center-magna div {
   margin: 0;
   position: absolute;
-  top: 20%;
+  top: 25%;
 }

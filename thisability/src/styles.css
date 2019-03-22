@@ -433,7 +433,8 @@ h1 {
 
 .card {
   border-radius: 35px;
-  box-shadow: 0 3px 4px rgba(0,0,0,0.13), 0 3px 4px rgba(0,0,0,0.13);
+  border: 0;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.05), 0 1px 6px 0 rgba(0,0,0,0.05);
 }
 
 

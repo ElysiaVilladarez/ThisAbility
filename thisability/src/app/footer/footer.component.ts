@@ -39,9 +39,9 @@ export class FooterComponent implements OnInit {
             break;
           }
           default: {
-            this.footerLink.labelLeft = 'DISCOUNT CALCULATOR';
+            this.footerLink.labelLeft = '';
             this.footerLink.labelRight = 'REGISTRATION PROCESS';
-            this.footerLink.routerLinkLeft = '/calculator';
+            this.footerLink.routerLinkLeft = '';
             this.footerLink.routerLinkRight = '/registration-process';
             break;
           }

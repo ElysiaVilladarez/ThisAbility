@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class CalculatorListComponent implements OnInit {
     integerLimit: 5
   });
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.calculatorArray = [
@@ -75,5 +76,10 @@ export class CalculatorListComponent implements OnInit {
 
     this.displayedTotalExpenses = parseFloat(this.totalExpenses.toFixed(2)).toLocaleString();
     this.displayedDiscountedExpenses = parseFloat(this.discountedExpenses.toFixed(2)).toLocaleString();
+  }
+
+  goToAbout() {
+
+    this.router.navigateByUrl('/home');
   }
 }
