@@ -6,8 +6,8 @@ import { CalculatorListComponent } from './calculator/calculator-list/calculator
 import { RegistrationProcessComponent } from './registration-process/registration-process.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: MainComponent },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'about', component: MainComponent },
   { path: 'calculator', component: CalculatorListComponent },
   { path: 'registration-process', component: RegistrationProcessComponent }
 ];

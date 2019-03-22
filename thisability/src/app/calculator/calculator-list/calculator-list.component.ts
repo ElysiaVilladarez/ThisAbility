@@ -80,6 +80,6 @@ export class CalculatorListComponent implements OnInit {
 
   goToAbout() {
 
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/about');
   }
 }

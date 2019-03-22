@@ -25,24 +25,24 @@ export class FooterComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         switch (event.url) {
           case '/calculator': {
-            this.footerLink.labelLeft = 'HOME';
+            this.footerLink.labelLeft = 'ABOUT';
             this.footerLink.labelRight = 'REGISTRATION PROCESS';
-            this.footerLink.routerLinkLeft = '/home';
+            this.footerLink.routerLinkLeft = '/about';
             this.footerLink.routerLinkRight = '/registration-process';
             break;
           }
           case '/registration-process': {
-            this.footerLink.labelLeft = 'HOME';
-            this.footerLink.labelRight = 'DISCOUNT CALCULATOR';
-            this.footerLink.routerLinkLeft = '/home';
-            this.footerLink.routerLinkRight = '/calculator';
+            this.footerLink.labelLeft = 'DISCOUNT CALCULATOR';
+            this.footerLink.labelRight = 'ABOUT';
+            this.footerLink.routerLinkLeft = '/calculator';
+            this.footerLink.routerLinkRight = '/about';
             break;
           }
           default: {
             this.footerLink.labelLeft = '';
-            this.footerLink.labelRight = 'REGISTRATION PROCESS';
+            this.footerLink.labelRight = 'DISCOUNT CALCULATOR';
             this.footerLink.routerLinkLeft = '';
-            this.footerLink.routerLinkRight = '/registration-process';
+            this.footerLink.routerLinkRight = '/calculator';
             break;
           }
         }

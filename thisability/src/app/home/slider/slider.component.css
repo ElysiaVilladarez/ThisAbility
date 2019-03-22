@@ -3,6 +3,10 @@
   height: 700px;
 }
 
+.full-viewport {
+  height: 100vh;
+}
+
 .slider {
   position: relative;
   text-align: center;
@@ -10,15 +14,20 @@
   min-height: 600px;
 }
 
-.slider img {
+.slider img.landing-img {
   width: 100%;
   /* height: 100%; */
 }
 
-.slider .text {
+.slider .text, .slider .slide-arrow {
   position: absolute;
   top: 8px;
   left: 16px;
+}
+
+.slider .slide-arrow {
+  top:85%;
+  width: 100%
 }
 
 .slider .tag {

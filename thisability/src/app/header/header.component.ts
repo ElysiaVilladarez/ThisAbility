@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     if (this.isInHome) {
       this.helper.goToAbout();
     } else {
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/about');
     }
   }
 
