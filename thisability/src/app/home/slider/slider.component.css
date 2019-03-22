@@ -11,6 +11,7 @@
 
 .slider img {
   width: 100%;
+  min-height: 850px;
   /* height: 100%; */
 }
 
@@ -43,6 +44,7 @@
 
 .magna-slider img {
   width: 100%;
+  min-height: 850px;
 }
 
 
