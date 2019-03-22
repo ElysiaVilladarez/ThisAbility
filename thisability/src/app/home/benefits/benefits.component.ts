@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-benefits',
@@ -69,6 +70,10 @@ export class BenefitsComponent implements OnInit {
         nipa shingle, plyboard, construction nails, batteries, electrical supplies, light bulbs, steel wire and other<br>
         commodities that may be classified by the DTI and DA`
       }];
+
+
+      const photoWidth = $('.benefit20-item img').width();
+      $('.benefit20-item img').css({'height': photoWidth + 'px'});
   }
 
 }

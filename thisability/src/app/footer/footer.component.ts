@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
-
+declare var $: any;
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -14,6 +14,7 @@ export class FooterComponent implements OnInit {
     routerLinkRight: ''
   };
 
+  fbLink = `https://www.facebook.com/ThisAbility-433169680560193/`;
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -55,4 +56,8 @@ export class FooterComponent implements OnInit {
     });
   }
 
+  redirectToFBPage() {
+    console.log('redirect to fb');
+    $('#fb-redirect')[0].click();
+  }
 }
