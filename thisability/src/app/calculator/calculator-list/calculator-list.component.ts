@@ -48,7 +48,7 @@ export class CalculatorListComponent implements OnInit {
         label: 'Recreational',
         total: 0,
         discount: 0,
-        discountPercentage: .05
+        discountPercentage: .20
       }
     ];
   }
