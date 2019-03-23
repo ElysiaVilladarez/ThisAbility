@@ -60,4 +60,8 @@ export class FooterComponent implements OnInit {
     console.log('redirect to fb');
     $('#fb-redirect')[0].click();
   }
+
+  goToHome() {
+    this.router.navigateByUrl('/about');
+  }
 }

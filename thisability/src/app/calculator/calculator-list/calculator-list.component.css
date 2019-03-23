@@ -28,3 +28,12 @@
 .benefits-redirect {
   letter-spacing: 0px;
 }
+
+.tooltip-class .tooltip-inner {
+  background-color: darkgreen;
+  font-size: 125%;
+}
+.tooltip-class .arrow::before {
+  border-top-color: darkgreen;
+  left: 30%;
+}

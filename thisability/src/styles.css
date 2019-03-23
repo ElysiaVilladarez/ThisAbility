@@ -447,6 +447,11 @@ h1 {
   width: 100%;
 }
 
+.fixed {
+  top: 1500px;
+  position: fixed;
+}
+
 .display-inline-block {
   display: inline-block;
 }

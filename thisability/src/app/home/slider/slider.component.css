@@ -11,7 +11,7 @@
   position: relative;
   text-align: center;
   color: white;
-  min-height: 600px;
+  min-height: 725px;
 }
 
 .slider img.landing-img {
@@ -19,15 +19,15 @@
   /* height: 100%; */
 }
 
-.slider .text, .slider .slide-arrow {
+.slider .text {
   position: absolute;
   top: 8px;
   left: 16px;
 }
 
 .slider .slide-arrow {
-  top:85%;
-  width: 100%
+  top: 82vh;
+  position: absolute;
 }
 
 .slider .tag {
@@ -49,7 +49,7 @@
 .magna {
   margin-top: 75px;
   margin-bottom: 75px;
-  min-height: 600px;
+  min-height: 725px;
 }
 
 .magna-slider img {

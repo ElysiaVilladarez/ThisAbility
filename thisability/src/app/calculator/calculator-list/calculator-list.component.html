@@ -16,11 +16,11 @@
     </div>
   </div>
 
-  <div class="row margin-top-xxxl">
+  <div class="row margin-top-md margin-bottom-xxxl">
     <div class="offset-md-2 col-md-8">
       <div class="row">
-        <div class="col-md-6">
-          <div class="row margin-bottom-md" *ngFor="let c of calculatorArray; let i = index;">
+        <div class="col-md-6 calculator-list">
+          <div class="row" *ngFor="let c of calculatorArray; let i = index;">
             <div class="col-md-12">
               <app-calculator-item [index]="i" [label]= "c.label" (totalPriceChanging)="computeForDiscount($event)"></app-calculator-item>
             </div>
