@@ -44,7 +44,7 @@ export class RegistrationProcessComponent implements OnInit {
 
     this.whereToGoArray = [
     `PWD Affairs Office (PDAO) of your City Hall`,
-    `<b>For soldiers admitted at V. Luna Hospital from a far away area or with an urgent case:</b>
+    `<span class="Poppins-700">For soldiers admitted at V. Luna Hospital from a far away area or with an urgent case:</span>
             National Council on Disability Affairs (NCDA)`,
     `Office of the Mayor`,
     `You can also go to your nearest City/Municipal Health Office,

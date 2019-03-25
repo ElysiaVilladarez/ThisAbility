@@ -6,14 +6,6 @@
   background-color: white;
 }
 
-.downloads img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  border: solid 1px #1F1D1B;
-  background-color: white;
-}
-
 .steps img {
   border: solid 1px #1F1D1B;
   width: 100%;
@@ -26,9 +18,12 @@
   bottom: 15%;
 }
 
-.where-to-go img {
+.where-to-go img.display {
   width: 100%;
   height: 385px;
+}
+.where-to-go img.location-icon {
+  width: 100%;
 }
 
 .what-to-bring .vertical-center h1 {
@@ -46,10 +41,14 @@
   height: 100%;
 }
 
-.download-links hr {
-  /* height: 100%;
-  width: 8px;
-  color: #F21646;
-  border-radius: 4px; */
+
+.downloads .vertical-center {
+  vertical-align: middle;
+  display: flex;
+  align-items: center
+}
+
+.download-links {
+  border-radius: 10px;
 }
 

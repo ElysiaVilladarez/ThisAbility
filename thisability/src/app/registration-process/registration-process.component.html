@@ -6,9 +6,17 @@
     </div>
   </div>
   <div class="row text-center margin-top-md downloads">
-      <div class="offset-md-1 col-md-2 download-links">
-        <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD FORMS</label><br>
-        <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD CHECKLIST</label>
+      <div class="offset-md-1 col-md-2">
+        <div class="row full-height vertical-center">
+          <div class="col-md-10 padding-all-sm">
+              <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD FORMS</label><br>
+              <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD CHECKLIST</label>
+          </div>
+          <div class="col-md-1 padding-all-sm full-height">
+            <!-- <div class="full-height bg-red download-links"></div> -->
+            <img  src="../../assets/img/red-line.png">
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
         <label class="text-sm">Ready to take a step and register, but you don’t know how? Follow the procedures below and you’ll be registered in no time!</label>
@@ -25,7 +33,7 @@
     <div *ngFor="let c of whatToBringArray; let i = index;" class="col-md-3 margin-bottom-xxl" [ngClass]="{'offset-md-3': i%2 === 0}">
       <div class="text-center">
         <img src="{{c.imgUrl}}">
-        <h4 class="text-xs tracking-wide margin-top-xl margin-bottom-sm Poppins-700">{{c.caption}}</h4>
+        <h4 class="text-sm margin-top-xl margin-bottom-sm Poppins-700">{{c.caption}}</h4>
       </div>
     </div>
   </div>
@@ -39,16 +47,17 @@
 
 <div class="row margin-top-xl where-to-go">
     <div class="offset-md-2 col-md-8">
-        <img src="../../assets/bg-placeholder.png">
+        <img class="display" src="../../assets/bg-placeholder.png">
 
-        <div class="row what-to-bring margin-top-xl">
+        <div class="row margin-top-xl">
             <div *ngFor="let c of whereToGoArray;" class="col-md-6 margin-bottom-xl padding-right-sm padding-left-sm">
               <div class="row">
-                <div class="offset-1 col-md-1 vertical-center">
-                    <i class="fa fa-4x red fa-map-marker" aria-hidden="true"></i>
+                <div class="offset-1 col-md-2 vertical-center">
+                    <!-- <i class="fa fa-4x red fa-map-marker" aria-hidden="true"></i> -->
+                    <img class="location-icon" src="../../assets/img/location-icon.png">
                 </div>
-                <div class="col-md-9 vertical-center">
-                    <label class="text-xs Poppins-300 padding-left-md">{{ c }}</label>
+                <div class="col-md-8 vertical-center padding-all-sm">
+                    <label class="text-sm Poppins-300 padding-left-md" innerHtml="{{c}}">{{ c }}</label>
                 </div>
               </div>
             </div>
@@ -70,7 +79,7 @@
         <div class="col-md-2">
           <div class="caption">
             <h1 class="red text-xxl margin-bottom-md">{{ (i+1) }}</h1>
-            <label class="text-xs Poppins-200">{{ c.caption }}</label>
+            <label class="text-sm Poppins-200">{{ c.caption }}</label>
           </div>
         </div>
     </div>
@@ -79,7 +88,7 @@
         <div class="offset-md-2 col-md-2">
           <div class="caption text-right padding-right-md">
               <h1 class="red text-xxl margin-bottom-md">{{ (i+1) }}</h1>
-              <label class="text-xs Poppins-200">{{ c.caption }}</label>
+              <label class="text-sm Poppins-200">{{ c.caption }}</label>
             </div>
         </div>
         <div class="col-md-6">

@@ -35,7 +35,9 @@
           <div id="total-calculator" >
           <div class="bg-red card margin-top-sm padding-all-lg">
             <div class="row">
-              <h4 class="offset-md-1 col-md-5 Poppins-600 white text-sm">EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="Test Tooltip" tooltipClass="tooltip-class"></i></h4>
+              <h4 class="offset-md-1 col-md-5 Poppins-600 white text-sm">EXPENSES
+                <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="Test Tooltip" triggers="manual" #t1="ngbTooltip" (click)="toggleWithGreeting(t1, 'Bonjour')" tooltipClass="tooltip-class"></i>
+              </h4>
               <h4 class="col-md-6 Poppins-600 white text-sm">DISCOUNTED <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
             </div>
             <div class="margin-top-md" *ngFor="let c of calculatorArray; let i = index;">

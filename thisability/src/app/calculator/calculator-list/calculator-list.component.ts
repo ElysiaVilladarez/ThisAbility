@@ -81,4 +81,12 @@ export class CalculatorListComponent implements OnInit {
   goToAbout() {
     this.router.navigateByUrl('/about');
   }
+
+  toggleWithGreeting(tooltip, greeting: string) {
+    if (tooltip.isOpen()) {
+      tooltip.close();
+    } else {
+      tooltip.open({greeting});
+    }
+  }
 }

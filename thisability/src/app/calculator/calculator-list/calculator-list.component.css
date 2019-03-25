@@ -29,11 +29,29 @@
   letter-spacing: 0px;
 }
 
-.tooltip-class .tooltip-inner {
+::ng-deep .tooltip-inner {
   background-color: darkgreen;
   font-size: 125%;
 }
-.tooltip-class .arrow::before {
-  border-top-color: darkgreen;
-  left: 30%;
+::ng-deep .arrow{
+  transform: rotate(-50deg);
+  left: calc(95% - .4rem) !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+::ng-deep .arrow::before{
+  top: 0;
+  border-width: .7rem .4rem .9rem !important;
+  border-top-color: #000;
+}
+
+::ng-deep .tooltip-inner {
+  border-bottom-right-radius: 0px !important;
+}
+
+::ng-deep .tooltip.show {
+  padding-bottom: 1px !important;
+  padding-right: 3px !important;
+  transform: translate(-12px, -38px) !important;
 }
