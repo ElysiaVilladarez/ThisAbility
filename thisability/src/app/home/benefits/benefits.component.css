@@ -6,3 +6,18 @@
   height: 300px;
   width: 100%
 }
+
+.vertical-center {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-center hr {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  width: 30%;
+  border-top: 1px solid #707070;
+}

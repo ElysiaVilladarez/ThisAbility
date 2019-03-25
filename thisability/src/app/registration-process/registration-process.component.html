@@ -1,18 +1,17 @@
 
 <div class="container-fluid">
   <div class="row text-center margin-top-xl margin-bottom-md">
-    <div class="col-md-12">
+    <div class="offset-md-3 col-md-6">
       <h1 class="text-xl red margin-top-xxl">Registration Process</h1>
     </div>
   </div>
   <div class="row text-center margin-top-md downloads">
-      <div class="offset-md-3 col-md-3">
-        <img src="../../assets/bg-placeholder.png">
-        <label class="text-xs Poppins-700 margin-left-md">DOWNLOAD CHECKLIST</label>
+      <div class="offset-md-1 col-md-2 download-links">
+        <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD FORMS</label><br>
+        <label class="text-small float-right Poppins-700 margin-left-md">DOWNLOAD CHECKLIST</label>
       </div>
-      <div class="col-md-3">
-        <img src="../../assets/bg-placeholder.png">
-        <label class="text-xs Poppins-700 margin-left-md">DOWNLOAD FORMS</label>
+      <div class="col-md-6">
+        <label class="text-sm">Ready to take a step and register, but you don’t know how? Follow the procedures below and you’ll be registered in no time!</label>
       </div>
     </div>
 
@@ -28,6 +27,32 @@
         <img src="{{c.imgUrl}}">
         <h4 class="text-xs tracking-wide margin-top-xl margin-bottom-sm Poppins-700">{{c.caption}}</h4>
       </div>
+    </div>
+  </div>
+
+
+<div class="row text-center margin-top-xxxl">
+    <div class="col-md-12 margin-top-xxxl">
+      <h1 class="text-xl red">Where to Go</h1>
+    </div>
+  </div>
+
+<div class="row margin-top-xl where-to-go">
+    <div class="offset-md-2 col-md-8">
+        <img src="../../assets/bg-placeholder.png">
+
+        <div class="row what-to-bring margin-top-xl">
+            <div *ngFor="let c of whereToGoArray;" class="col-md-6 margin-bottom-xl padding-right-sm padding-left-sm">
+              <div class="row">
+                <div class="offset-1 col-md-1 vertical-center">
+                    <i class="fa fa-4x red fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-9 vertical-center">
+                    <label class="text-xs Poppins-300 padding-left-md">{{ c }}</label>
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
   </div>
 
@@ -63,37 +88,11 @@
     </div>
   </div>
 
-
-<div class="row text-center margin-top-xxxl">
-    <div class="col-md-12 margin-top-xxxl">
-      <h1 class="text-xl red">Where to Go</h1>
-    </div>
-  </div>
-
-    <div class="row margin-top-xl where-to-go">
-        <div class="offset-md-2 col-md-8">
-            <img src="../../assets/bg-placeholder.png">
-
-            <div class="row what-to-bring margin-top-xl">
-                <div *ngFor="let c of whereToGoArray;" class="col-md-6 margin-bottom-xl padding-right-sm padding-left-sm">
-                  <div class="row">
-                    <div class="col-md-1 vertical-center">
-                        <h1 class="red text-xxl display-inline-block">•</h1>
-                    </div>
-                    <div class="col-md-11 vertical-center">
-                        <label class="text-xs Poppins-300 padding-left-xxl">{{ c }}</label>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="row margin-top-md margin-bottom-xxxl">
+      <div class="row margin-top-xxxl margin-bottom-xxxl">
           <div class="offset-md-2 col-md-12">
-            <label class="text-small gray">Sources:</label><br>
-            <a class="text-small gray" href="https://www.esquiremag.ph/culture/lifestyle/pwd-id-mental-illness-a2217-20180813" target="_blank">Esquire: There's a PWD ID for Mental Illness. Here's How to Apply for One</a><br>
-            <a class="text-small gray" href="http://www.ncda.gov.ph/2009/07/apply-fo-pwd-id-card/">NCDA: How to Apply for PWD ID Card</a>
+            <label class="text-small gray Poppins-700">Sources:</label><br>
+            <a class="text-small gray Poppins-200" href="https://www.esquiremag.ph/culture/lifestyle/pwd-id-mental-illness-a2217-20180813" target="_blank">Esquire: There's a PWD ID for Mental Illness. Here's How to Apply for One</a><br>
+            <a class="text-small gray Poppins-200" href="http://www.ncda.gov.ph/2009/07/apply-fo-pwd-id-card/">NCDA: How to Apply for PWD ID Card</a>
           </div>
         </div>
 </div>

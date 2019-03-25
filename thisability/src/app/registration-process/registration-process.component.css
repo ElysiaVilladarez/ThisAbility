@@ -31,13 +31,25 @@
   height: 385px;
 }
 
-.what-to-bring .vertical-center {
+.what-to-bring .vertical-center h1 {
   vertical-align: middle;
   display: flex;
   align-items: center
 }
 
+.what-to-bring .vertical-center label {
+  display: block;
+  align-items: center
+}
+
 .what-to-bring .row {
   height: 100%;
+}
+
+.download-links hr {
+  /* height: 100%;
+  width: 8px;
+  color: #F21646;
+  border-radius: 4px; */
 }
 

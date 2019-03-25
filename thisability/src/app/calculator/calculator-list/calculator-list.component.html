@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row text-center discount-calculator padding-top-lg margin-bottom-xl">
-    <div class="offset-md-3 col-md-6">
+    <div class="offset-md-2 col-md-8">
       <h1 class="text-xl red margin-top-xxl">Discount Calculator</h1>
       <h4 class="margin-top-lg margin-bottom-sm text-lg">Still don't think it's worth it to register?</h4>
       <h4 class="margin-bottom-sm text-lg">Input your monthly expenses!</h4>
-      <label class="Poppins-300 margin-top-lg text-xs">Find out how much you could be saving in your groceries, transportation, medicine, and recreational expenses using the discount calculator.</label>
-      <label class="Poppins-300 margin-top-lg text-xs display-block">*Take note that there are items and services not included in the PWD discounts.</label>
-      <label class="Poppins-300 text-xs margin-top-sm">See <span class="red underline pointer" (click)="goToAbout()">benefits</span> in the about page.</label>
+      <label class="Poppins-300 margin-top-lg text-sm padding-left-xxxl padding-right-xxxl">Find out how much you could be saving in your groceries, transportation, medicine, and recreational expenses using the discount calculator.</label>
+      <label class="Poppins-300 margin-top-lg text-sm display-block">*Take note that there are items and services not included in the PWD discounts.</label>
+      <label class="Poppins-300 text-sm margin-top-sm">See <span class="red underline pointer" (click)="goToAbout()">benefits</span> in the about page.</label>
     </div>
   </div>
 
@@ -35,21 +35,21 @@
           <div id="total-calculator" >
           <div class="bg-red card margin-top-sm padding-all-lg">
             <div class="row">
-              <h4 class="offset-md-1 col-md-5 Poppins-600 white text-sm">EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
+              <h4 class="offset-md-1 col-md-5 Poppins-600 white text-sm">EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="Test Tooltip" tooltipClass="tooltip-class"></i></h4>
               <h4 class="col-md-6 Poppins-600 white text-sm">DISCOUNTED <i class="fa fa-question-circle yellow" aria-hidden="true"></i></h4>
             </div>
             <div class="margin-top-md" *ngFor="let c of calculatorArray; let i = index;">
               <div class="row margin-bottom-xs">
                 <div class="offset-md-1 col-md-5">
-                    <label class="Poppins-200 text-xs white small" [textMask]="{ mask: currencyMask }">{{ c.label }}</label>
+                    <label class="Poppins-200 text-sm white small" [textMask]="{ mask: currencyMask }">{{ c.label }}</label>
                 </div>
               </div>
               <div class="row">
                 <div class="offset-md-1 col-md-5">
-                    <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.total.toLocaleString() }}">
+                    <input class="text-sm Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.total.toLocaleString() }}">
                 </div>
                 <div class="col-md-5">
-                    <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.discount.toLocaleString() }}">
+                    <input class="text-sm Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.discount.toLocaleString() }}">
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="row margin-top-sm margin-bottom-lg">
                 <div class="offset-md-1 col-md-10">
-                    <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedTotalExpenses}}">
+                    <input class="text-sm Poppins-700 big text-center" readonly disabled value="{{ displayedTotalExpenses}}">
                 </div>
             </div>
             <div class="row text-center">
@@ -75,7 +75,7 @@
             </div>
             <div class="row margin-top-sm">
                 <div class="offset-md-1 col-md-10">
-                    <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedDiscountedExpenses}}">
+                    <input class="text-sm Poppins-700 big text-center" readonly disabled value="{{ displayedDiscountedExpenses}}">
                 </div>
             </div>
           </div>

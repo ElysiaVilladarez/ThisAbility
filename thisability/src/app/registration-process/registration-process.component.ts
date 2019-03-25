@@ -44,8 +44,8 @@ export class RegistrationProcessComponent implements OnInit {
 
     this.whereToGoArray = [
     `PWD Affairs Office (PDAO) of your City Hall`,
-    `You can go to the National Council on Disability Affairs (NCDA)
-              if you are a soldier admitted at V. Luna Hospital from a far away area, or have an urgent case`,
+    `<b>For soldiers admitted at V. Luna Hospital from a far away area or with an urgent case:</b>
+            National Council on Disability Affairs (NCDA)`,
     `Office of the Mayor`,
     `You can also go to your nearest City/Municipal Health Office,
               or your Barangay satellite Health Office for verification of Certificate of Disability`,

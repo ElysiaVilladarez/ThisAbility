@@ -153,6 +153,7 @@ h1 {
 
 .text-sm {
   font-size: 18px;
+  line-height: 36px;
 }
 
 .text-md {
@@ -254,6 +255,22 @@ h1 {
 }
 .padding-all-xxl {
   padding: 48px;
+}
+
+.padding-left-xxxl {
+  padding-left: 60px;
+}
+.padding-right-xxxl {
+  padding-right: 60px;
+}
+.padding-top-xxxl {
+  padding-top: 60px;
+}
+.padding-bottom-xxxl {
+  padding-bottom: 60px;
+}
+.padding-all-xxxl {
+  padding: 60px;
 }
 
 .margin-left-sm {
@@ -443,7 +460,7 @@ h1 {
   /* box-shadow: 0 3px 6px 0 rgba(0,0,0,.08); */
   position: sticky;
   top: 0;
-  height: 120px;
+  /* height: 120px; */
   width: 100%;
 }
 
