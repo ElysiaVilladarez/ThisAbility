@@ -8,6 +8,7 @@ import { Helper } from '../../helper';
 })
 export class SliderComponent implements OnInit {
   helper: Helper = new Helper();
+  fbLink = Helper.fbLink;
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class SliderComponent implements OnInit {
 
   goToAbout() {
     this.helper.goToAbout();
+  }
+
+  redirectToFBPage() {
+    this.helper.redirectToFBPage();
   }
 
 }
