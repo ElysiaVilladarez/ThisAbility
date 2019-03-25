@@ -13,6 +13,10 @@ export class CalculatorListComponent implements OnInit {
   totalExpenses = 0;
   discountedExpenses = 0;
 
+  expensesTooltip = 'your total monthly expenses per category';
+  discountedTooltip = 'your discounted expenses per category';
+  totalExpensesTooltip = 'your overall expenses for the whole month';
+  discountedExpensesTooltip = 'your overall expenses if discounted';
 
   displayedTotalExpenses = '0';
   displayedDiscountedExpenses = '0';

@@ -28,30 +28,47 @@
 .benefits-redirect {
   letter-spacing: 0px;
 }
-
+/*
 ::ng-deep .tooltip-inner {
   background-color: darkgreen;
   font-size: 125%;
 }
 ::ng-deep .arrow{
-  transform: rotate(-50deg);
-  left: calc(95% - .4rem) !important;
+  transform: rotate(-45deg);
+  left: calc(97% - .4rem) !important;
   width: 0 !important;
   height: 0 !important;
 }
 
 ::ng-deep .arrow::before{
   top: 0;
-  border-width: .7rem .4rem .9rem !important;
-  border-top-color: #000;
+  border-width: .9rem .4rem .9rem !important;
+  border-top-color: white !important;
 }
 
 ::ng-deep .tooltip-inner {
-  border-bottom-right-radius: 0px !important;
+  border-radius: 10px 10px 0px 10px !important;
+  background-color: white;
+  color: black;
+  font-size: 14px;
 }
 
 ::ng-deep .tooltip.show {
-  padding-bottom: 1px !important;
-  padding-right: 3px !important;
-  transform: translate(-12px, -38px) !important;
+  border: 1px gray solid;
+  border-radius: 10px 10px 0px 10px !important;
+  padding-bottom: 0px !important;
+  padding-right: 1px !important;
+  transform: translate(-50%, -55px) !important;
+  opacity: .68 !important;
+  width: 200px;
+} */
+
+::ng-deep .tooltip.show {
+  width: 200px;
+}
+
+::ng-deep .tooltip-inner {
+  padding: 5px;
+  font-size: 14px;
+  z-index: 300px !important;
 }
