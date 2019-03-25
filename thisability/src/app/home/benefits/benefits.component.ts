@@ -16,11 +16,11 @@ export class BenefitsComponent implements OnInit {
   ngOnInit() {
     this.benefitsArray20 = [
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-hotel.png',
       caption: 'Hotels and Similar Lodging<br>Establishments'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-restaurant.png',
       caption: 'Restaurants'
     },
     {
@@ -73,8 +73,8 @@ export class BenefitsComponent implements OnInit {
       }];
 
 
-      const photoWidth = $('.benefit20-item img').width();
-      $('.benefit20-item img').css({'height': photoWidth + 'px'});
+      // const photoWidth = $('.benefit20-item img').width();
+      // $('.benefit20-item img').css({'height': photoWidth + 'px'});
 
 
       this.eligibilityArray = [
