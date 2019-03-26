@@ -8,6 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent {
   title = 'app';
+  marginTop = 25;
 
   constructor(@Inject(DOCUMENT) document) {
   }
@@ -38,10 +39,24 @@ export class AppComponent {
       // }
         element2.classList.remove('fixed');
         element2.classList.add('sticky');
-        element2.style.top = element.offsetHeight + 'px';
+        element2.style.top = element.offsetHeight + this.marginTop + 'px';
       } else {
        element2.classList.remove('sticky');
        element2.classList.remove('fixed');
+      }
+    }
+
+    const element3 = document.getElementById('downloads');
+    if (element3) {
+      const hideWhenSticky = document.getElementById('hide-when-sticky');
+      const startOfSticky = (window.pageYOffset - element.offsetHeight);
+      if (startOfSticky > element3.scrollHeight) {
+        element3.classList.add('sticky');
+        hideWhenSticky.hidden = true;
+        element3.style.top = element.offsetHeight + this.marginTop + 'px';
+      } else {
+        hideWhenSticky.hidden = false;
+        element3.classList.remove('sticky');
       }
     }
   }

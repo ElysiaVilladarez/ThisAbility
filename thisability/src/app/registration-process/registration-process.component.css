@@ -42,13 +42,13 @@
 }
 
 
-.downloads .vertical-center {
+#downloads .vertical-center {
   vertical-align: middle;
   display: flex;
   align-items: center
 }
 
-.download-links {
+/* .download-links {
   border-radius: 10px;
-}
+} */
 
