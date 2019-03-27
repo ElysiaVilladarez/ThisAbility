@@ -123,6 +123,14 @@ h1 {
   color: #CCCCCC;
 }
 
+.light-gray {
+  color: #BABABA;
+}
+
+.dark-gray {
+  color: #626262;
+}
+
 .bg-red {
   background-color: #F21646;
 }
@@ -141,6 +149,10 @@ h1 {
 
 .bg-blue {
   background-color: #8CCCF5;
+}
+
+.text-smaller {
+  font-size: 12px;
 }
 
 .text-small {
@@ -481,4 +493,8 @@ img.logo {
 
 img.brand {
   height: 17px;
+}
+
+.border-cream {
+  border: 1px solid #EFEFEF;
 }

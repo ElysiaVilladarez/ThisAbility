@@ -15,10 +15,18 @@ export class CalculatorRowComponent implements OnInit {
 
   itemName: string;
   itemPrice: number;
+  itemCount = 1;
+
+  itemCountDisplay = '1';
 
   currencyMask = createNumberMask({
     prefix: '₱',
     allowDecimal: true,
+    integerLimit: 5
+  });
+
+  numberMask = createNumberMask({
+    prefix: '',
     integerLimit: 5
   });
 
@@ -28,8 +36,17 @@ export class CalculatorRowComponent implements OnInit {
   }
 
   onPriceChanged(event) {
-    this.form.setValue(this.toCurrency(event.target.value));
+    const p = this.toCurrency(event.target.value);
+    this.itemPrice = p;
+    this.form.setValue((this.itemPrice * this.itemCount));
   }
+
+  onCountChanged(event) {
+    const c = parseInt(this.toCurrency(event.target.value).toString(), 10);
+    this.itemCount = c;
+    this.form.setValue((this.itemPrice * this.itemCount));
+  }
+
 
   removeRow() {
     this.removingRow.emit(this.index);
@@ -40,5 +57,15 @@ export class CalculatorRowComponent implements OnInit {
     number = number.replace(',', '');
 
     return parseFloat(number);
+  }
+
+  increaseCount() {
+    this.itemCountDisplay = (this.itemCount + 1).toLocaleString();
+    this.onCountChanged({ target: {value : this.itemCountDisplay }} );
+  }
+
+  decreaseCount() {
+    this.itemCountDisplay = (this.itemCount - 1).toLocaleString();
+    this.onCountChanged({ target: {value : this.itemCountDisplay }} );
   }
 }

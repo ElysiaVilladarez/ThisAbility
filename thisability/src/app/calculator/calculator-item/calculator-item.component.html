@@ -3,18 +3,30 @@
     <h1 class="text-xl red margin-top-md">{{ label }}</h1>
   </div>
 </div>
-<div class="row margin-top-md bg-cream card padding-top-lg padding-left-xl padding-right-xxl padding-bottom-sm">
-    <div class="col-md-12">
-        <h4 class="red text-lg margin-bottom-md">ITEMS</h4>
+<div class="row margin-top-md bg-cream card border-cream padding-top-lg padding-left-lg padding-right-xl padding-bottom-sm">
+    <div class="col-md-12 padding-right-md padding-left-md">
+        <h4 class="red text-lg">ITEMS</h4>
+        <div class="row text-center margin-bottom-md">
+          <div class="col-md-5 bottom">
+            <label class="text-xs Poppins-700 dark-gray">ITEM NAME</label>
+          </div>
+          <div class="col-md-3 bottom">
+            <label class="text-xs Poppins-700 dark-gray">PRICE</label>
+          </div>
+          <div class="col-md-3">
+            <label class="text-smaller Poppins-700 dark-gray">NO. OF TIMES</label>
+          </div>
+        </div>
           <div *ngFor="let f of keys; let i = index;">
             <app-calculator-row [form]="formGroup.controls[f]" [index]="f" (removingRow)="removeRow($event)"></app-calculator-row>
           </div>
+        <label class="pointer text-xs light-gray margin-left-lg margin-bottom-md" (click)="addRow()"><i class="fa fa-plus light-gray margin-right-sm" aria-hidden="true"></i> ADD ITEM</label>
     </div>
 </div>
 
 <div class="row margin-top-md margin-bottom-md">
     <div class="col-md-12 action-buttons">
-        <button class="btn btn-default btn-yellow margin-right-md" (click)="addRow()">add</button>
+        <!-- <button class="btn btn-default btn-yellow margin-right-md" (click)="addRow()">add</button> -->
         <button class="btn btn-default btn-red" (click)="reset()">reset</button>
     </div>
 </div>
