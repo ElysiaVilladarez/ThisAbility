@@ -26,7 +26,7 @@
 }
 
 .slider .slide-arrow {
-  top: 78vh;
+  top: 80vh;
   position: absolute;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .center {
-  top: 20vh;
+  top: 15vh;
   height: 100%;
   position: relative;
 }
@@ -63,7 +63,7 @@
 .center-magna div {
   margin: 0;
   position: absolute;
-  top: 25%;
+  top: 17%;
 }
 
 .fb-icon {

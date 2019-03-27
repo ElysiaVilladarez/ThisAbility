@@ -28,7 +28,7 @@ export class BenefitsComponent implements OnInit {
       caption: 'Recreation Centers'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-theater.png',
       caption: 'Theaters and Other Similar<br>Places of Culture, Leisure<br>and Amusement'
     },
     {
