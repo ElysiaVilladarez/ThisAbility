@@ -6,7 +6,7 @@
       <input [textMask]="{ mask: currencyMask }" class="rounded-edges border-cream" (keyup)="onPriceChanged($event)">
     </div>
   <div class="col-md-3 padding-right-sm padding-left-sm margin-bottom-sm">
-      <input [textMask]="{ mask: numberMask }" class="rounded-edges border-cream"
+      <input id="item-count" [textMask]="{ mask: numberMask }" class="rounded-edges border-cream"
       value="{{ itemCountDisplay }}" (keyup)="onCountChanged($event)">
       <i class="fa fa-chevron-up light-gray pointer" aria-hidden="true" (click)="increaseCount()"></i>
       <i class="fa fa-chevron-down light-gray pointer" aria-hidden="true" (click)="decreaseCount()"></i>

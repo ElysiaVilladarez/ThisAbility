@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
-
+declare var $: any;
 @Component({
   selector: 'app-calculator-row',
   templateUrl: './calculator-row.component.html',
@@ -18,6 +18,8 @@ export class CalculatorRowComponent implements OnInit {
   itemCount = 1;
 
   itemCountDisplay = '1';
+  maxDisplay = 9999;
+  minDisplay = 1;
 
   currencyMask = createNumberMask({
     prefix: '₱',
@@ -27,7 +29,8 @@ export class CalculatorRowComponent implements OnInit {
 
   numberMask = createNumberMask({
     prefix: '',
-    integerLimit: 5
+    integerLimit: 5,
+    minValue: 1
   });
 
   constructor() { }
@@ -44,6 +47,11 @@ export class CalculatorRowComponent implements OnInit {
   onCountChanged(event) {
     const c = parseInt(this.toCurrency(event.target.value).toString(), 10);
     this.itemCount = c;
+    if (event.target.value === '0') {
+      this.increaseCount();
+      $('#item-count').val(this.itemCountDisplay);
+      return;
+    }
     this.form.setValue((this.itemPrice * this.itemCount));
   }
 
@@ -60,12 +68,16 @@ export class CalculatorRowComponent implements OnInit {
   }
 
   increaseCount() {
-    this.itemCountDisplay = (this.itemCount + 1).toLocaleString();
-    this.onCountChanged({ target: {value : this.itemCountDisplay }} );
+    if (this.itemCount + 1 <= this.maxDisplay) {
+      this.itemCountDisplay = (this.itemCount + 1).toLocaleString();
+      this.onCountChanged({ target: {value : this.itemCountDisplay }} );
+    }
   }
 
   decreaseCount() {
-    this.itemCountDisplay = (this.itemCount - 1).toLocaleString();
-    this.onCountChanged({ target: {value : this.itemCountDisplay }} );
+    if (this.itemCount - 1 >= this.minDisplay) {
+      this.itemCountDisplay = (this.itemCount - 1).toLocaleString();
+      this.onCountChanged({ target: {value : this.itemCountDisplay }} );
+    }
   }
 }
