@@ -1,5 +1,6 @@
 import { Component, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { DOCUMENT } from '@angular/common';
 export class AppComponent {
   title = 'app';
   marginTop = 25;
+  previousScroll = 0;
+  hasShownOnce = false;
+  hasHiddenOnce = false;
 
   constructor(@Inject(DOCUMENT) document) {
   }
@@ -16,11 +20,40 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     const element = document.getElementById('header');
+    // element.classList.add('sticky');
      if (window.pageYOffset > 0) {
        element.classList.add('sticky');
      } else {
       element.classList.remove('sticky');
      }
+    // let scrollTop = $(document).scrollTop();
+
+    // if ( scrollTop < 0 ) {
+    //     scrollTop = 0;
+    // }
+    // if ( scrollTop > $('body').height() - $(window).height() ) {
+    //     scrollTop = $('body').height() - $(window).height();
+    // }
+
+    // if (scrollTop >= this.previousScroll && scrollTop) {
+    //     // scrolling down
+    //     if ( !$(element).is( ':hidden' ) && !this.hasHiddenOnce) {
+    //       $(element).slideUp('slow', () => {});
+    //       this.hasHiddenOnce = true;
+    //       this.hasShownOnce = false;
+    //     }
+    //     console.log('scrolling down');
+    // } else {
+    //     // scrolling up
+    //     if ( $(element).is( ':hidden' ) && !this.hasShownOnce) {
+    //       $(element).slideDown('slow', () => {});
+    //       this.hasHiddenOnce = false;
+    //       this.hasShownOnce = true;
+    //     }
+    //     console.log('scrolling up');
+    // }
+
+    // this.previousScroll = scrollTop;
 
 
     const element2 = document.getElementById('total-calculator');
