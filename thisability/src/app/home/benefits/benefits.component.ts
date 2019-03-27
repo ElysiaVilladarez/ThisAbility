@@ -32,7 +32,7 @@ export class BenefitsComponent implements OnInit {
       caption: 'Theaters and Other Similar<br>Places of Culture, Leisure<br>and Amusement'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-medicine.png',
       caption: 'Medicine'
     },
     {
