@@ -51,4 +51,9 @@
 /* .download-links {
   border-radius: 10px;
 } */
-
+#downloads a {
+  letter-spacing: 0 !important;
+}
+#downloads a:hover {
+  color:black;
+}

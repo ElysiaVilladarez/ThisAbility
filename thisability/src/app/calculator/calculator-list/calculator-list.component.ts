@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 import { Router } from '@angular/router';
+import { GoogleAnalyticsService } from '../../services/ga/google-analytics.service';
 
 
 @Component({
@@ -27,9 +28,11 @@ export class CalculatorListComponent implements OnInit {
     integerLimit: 5
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private ga: GoogleAnalyticsService) { }
 
   ngOnInit() {
+    this.ga.sendPageTracking('Discount_Calculator', '/calculator');
     this.calculatorArray = [
       {
         label: 'Grocery',

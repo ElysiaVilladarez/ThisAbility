@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { Helper } from '../helper';
+import { GoogleAnalyticsService } from '../services/ga/google-analytics.service';
 declare var $: any;
 @Component({
   selector: 'app-footer',
@@ -16,7 +17,8 @@ export class FooterComponent implements OnInit {
   };
 
   fbLink = Helper.fbLink;
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private ga: GoogleAnalyticsService) { }
 
   ngOnInit() {
     this.router.events.subscribe((event: any) => {
@@ -58,6 +60,7 @@ export class FooterComponent implements OnInit {
   }
 
   redirectToFBPage() {
+    this.ga.sendEventTracking('Registration_Process', 'redirect_to_fb');
     const helper = new Helper();
     helper.redirectToFBPage();
   }

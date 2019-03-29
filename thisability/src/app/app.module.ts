@@ -15,6 +15,7 @@ import { CalculatorRowComponent } from './calculator/calculator-row/calculator-r
 import { ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleAnalyticsService } from './services/ga/google-analytics.service';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     TextMaskModule,
     NgbTooltipModule
   ],
-  providers: [],
+  providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

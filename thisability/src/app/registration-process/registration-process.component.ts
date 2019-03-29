@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from '../services/ga/google-analytics.service';
 
 @Component({
   selector: 'app-registration-process',
@@ -9,9 +10,10 @@ export class RegistrationProcessComponent implements OnInit {
   whatToBringArray = null;
   stepsArray = null;
   whereToGoArray = null;
-  constructor() { }
+  constructor(private ga: GoogleAnalyticsService) { }
 
   ngOnInit() {
+    this.ga.sendPageTracking('Registration_Process', '/registration-process');
     this.whatToBringArray = [{
       imgUrl: '../../../assets/bg-placeholder.png',
       caption: 'Application Form (Download from the Link Above)'
@@ -51,5 +53,13 @@ export class RegistrationProcessComponent implements OnInit {
               or your Barangay satellite Health Office for verification of Certificate of Disability`,
     `City/Municipality Social Welfare and Development Office (CSWDO/MSWDO)`
     ];
+  }
+
+  downloadForm() {
+    this.ga.sendEventTracking('Registration_Process', 'download_form');
+  }
+
+  downloadChecklist() {
+    this.ga.sendEventTracking('Registration_Process', 'download_checklist');
   }
 }
