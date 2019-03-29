@@ -36,11 +36,11 @@ export class BenefitsComponent implements OnInit {
       caption: 'Medicine'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-dental.png',
       caption: 'Medical and Dental Services'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-travel.png',
       caption: 'Domestic Air and Sea Travel'
     },
     {
@@ -54,7 +54,6 @@ export class BenefitsComponent implements OnInit {
 
     this.benefitsArray5 = [
       {
-        imgUrl: '../../../assets/bg-placeholder.png',
         caption: 'BASIC NECESSITIES SUCH AS:',
         description: `rice, corn, bread, fresh or dried and canned fish and other marine products, fresh pork, beef
         and poultry meat, fresh eggs, fresh and processed milk, infant formula, fresh vegetables, root
@@ -63,7 +62,6 @@ export class BenefitsComponent implements OnInit {
         and the Department of Agriculture (DA)`
       },
       {
-        imgUrl: '../../../assets/bg-placeholder.png',
         caption: 'PRIME COMMODITIES SUCH AS:',
         description: `fresh fruits, dried or processed or canned pork, beef and poultry, meat, dairy products not falling under basic
         necessities, noodles, onions, garlic, diapers, herbicides, poultry, swine and cattle feeds, veterinary products

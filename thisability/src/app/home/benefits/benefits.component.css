@@ -14,7 +14,15 @@
   position: relative;
 }
 
-.vertical-center hr {
+.vertical-center hr{
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  width: 30%;
+  border-top: 1px solid #707070;
+}
+
+.benefits5 hr {
   position: absolute;
   bottom: 0;
   left: 35%;

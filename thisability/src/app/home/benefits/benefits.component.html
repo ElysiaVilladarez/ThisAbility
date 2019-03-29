@@ -43,22 +43,22 @@
     </div>
   </div>
 
-  <div class="row margin-top-xxxl margin-bottom-xxl">
+  <div class="row margin-top-xxxl">
       <div class="col-md-12 text-center">
         <h4 class="black tracking-wide text-lg">5% DISCOUNT</h4>
         <label class="text-sm Poppins-300 margin-top-sm">You are entitled to a 5% discount in the following services:</label>
       </div>
     </div>
 
-  <div class="row">
+  <div class="row benefits5">
       <div class="offset-md-2 col-md-8">
-        <div *ngFor="let b of benefitsArray5; let i = index;" class="row margin-bottom-xxxl">
-          <div class="col-md-12 margin-bottom-xxl">
-            <div class="benefit5-item text-center">
-            <img src="{{b.imgUrl}}"/>
-            <label class="Poppins-600 margin-all-md text-sm">{{b.caption}}</label>
+        <div *ngFor="let b of benefitsArray5; let i = index;" class="row">
+          <div class="offset-md-2 col-md-8">
+            <div class="benefit5-item text-center margin-bottom-xxxl margin-top-xxl">
+            <label class="Poppins-600 margin-all-md text-sm red">{{b.caption}}</label>
             <div class="text-sm Poppins-300" innerHtml="{{b.description}}">{{ b.description }}</div>
             </div>
+            <hr *ngIf="i < benefitsArray5.length - 1">
           </div>
         </div>
       </div>
