@@ -20,59 +20,11 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     const element = document.getElementById('header');
-    // element.classList.add('sticky');
-    //  if (window.pageYOffset > 0) {
-    //    element.classList.add('sticky');
-    //  } else {
-    //   element.classList.remove('sticky');
-    //  }
-    // let scrollTop = $(document).scrollTop();
-
-    // if ( scrollTop < 0 ) {
-    //     scrollTop = 0;
-    // }
-    // if ( scrollTop > $('body').height() - $(window).height() ) {
-    //     scrollTop = $('body').height() - $(window).height();
-    // }
-
-    // if (scrollTop >= this.previousScroll && scrollTop) {
-    //     // scrolling down
-    //     if ( !$(element).is( ':hidden' ) && !this.hasHiddenOnce) {
-    //       $(element).slideUp('slow', () => {});
-    //       this.hasHiddenOnce = true;
-    //       this.hasShownOnce = false;
-    //     }
-    //     console.log('scrolling down');
-    // } else {
-    //     // scrolling up
-    //     if ( $(element).is( ':hidden' ) && !this.hasShownOnce) {
-    //       $(element).slideDown('slow', () => {});
-    //       this.hasHiddenOnce = false;
-    //       this.hasShownOnce = true;
-    //     }
-    //     console.log('scrolling up');
-    // }
-    // const self = this;
-    // if (!scrollTop && $(element).is( ':hidden' )) {
-    //   $(element).slideDown('slow', () => {});
-    // } else if (scrollTop > 0 && !$(element).is( ':hidden' ) ) {
-    //   $(element).slideUp('slow', () => {});
-    // }
-    // clearTimeout($.data(this, 'scrollTimer'));
-    // $.data(this, 'scrollTimer', setTimeout(function() {
-    //     if (!$(element).is( ':hidden' ) && scrollTop >= self.previousScroll && scrollTop && !self.hasHiddenOnce) {
-    //         $(element).slideUp(500, () => {});
-    //         self.hasHiddenOnce = true;
-    //         self.hasShownOnce = false;
-    //     } else if ($(element).is( ':hidden' ) && (scrollTop < self.previousScroll || !scrollTop) && !self.hasShownOnce) {
-    //         $(element).slideDown(500, () => {});
-    //         self.hasHiddenOnce = false;
-    //         self.hasShownOnce = true;
-    //     } else {
-    //       self.previousScroll = scrollTop;
-    //     }
-    // }, 50));
-
+     if (window.pageYOffset > 0) {
+       element.classList.add('box-shadow');
+     } else {
+      element.classList.remove('box-shadow');
+     }
 
     const element2 = document.getElementById('total-calculator');
     if (element2) {

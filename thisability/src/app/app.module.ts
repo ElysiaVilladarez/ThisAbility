@@ -19,6 +19,7 @@ import { GoogleAnalyticsService } from './services/ga/google-analytics.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadroomModule } from '@ctrl/ngx-headroom';
+import { NonZeroDirective } from './directives/non-zero/non-zero.directive';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HeadroomModule } from '@ctrl/ngx-headroom';
     RegistrationProcessComponent,
     CalculatorListComponent,
     CalculatorItemComponent,
-    CalculatorRowComponent
+    CalculatorRowComponent,
+    NonZeroDirective
   ],
   imports: [
     BrowserModule,

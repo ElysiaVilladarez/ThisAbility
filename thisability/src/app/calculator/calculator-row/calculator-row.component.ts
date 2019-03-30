@@ -47,11 +47,6 @@ export class CalculatorRowComponent implements OnInit {
   onCountChanged(event) {
     const c = parseInt(this.toCurrency(event.target.value).toString(), 10);
     this.itemCount = c;
-    if (event.target.value === '0') {
-      this.increaseCount();
-      $('#item-count').val(this.itemCountDisplay);
-      return;
-    }
     this.form.setValue((this.itemPrice * this.itemCount));
   }
 
