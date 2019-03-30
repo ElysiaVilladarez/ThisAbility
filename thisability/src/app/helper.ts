@@ -6,7 +6,7 @@ export class Helper {
 
   goToAbout() {
     $('html, body').animate({
-      scrollTop: parseInt($('#about').offset().top, 10) - 95
+      scrollTop: parseInt($('#about').offset().top, 10)
     }, 1000);
   }
 

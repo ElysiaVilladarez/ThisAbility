@@ -20,10 +20,18 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     const element = document.getElementById('header');
-     if (window.pageYOffset > 0) {
-       element.classList.add('box-shadow');
+    const sliderElement = document.getElementById('slider');
+    const calculatorElement = document.getElementById('calculator');
+    const rpElement = document.getElementById('registration-process');
+    const elementArray = [sliderElement, calculatorElement, rpElement];
+     if (window.pageYOffset > element.offsetHeight) {
+       this.marginnedElement(elementArray, element.offsetHeight + 'px');
+        element.classList.add('box-shadow');
+     } else if (document.querySelectorAll('.headroom--pinned').length === 1 && window.pageYOffset === 0) {
+      this.removeMarginElement(elementArray);
+        element.classList.remove('box-shadow');
      } else {
-      element.classList.remove('box-shadow');
+        element.classList.remove('box-shadow');
      }
 
     const element2 = document.getElementById('total-calculator');
@@ -62,6 +70,22 @@ export class AppComponent {
         element3.classList.remove('sticky');
       }
     }
+  }
+
+  marginnedElement(elementArray: HTMLElement[], marginTop: string) {
+    elementArray.forEach((e) => {
+      if (e) {
+        e.style.marginTop = marginTop;
+      }
+    });
+  }
+
+  removeMarginElement(elementArray: HTMLElement[]) {
+    elementArray.forEach((e) => {
+      if (e) {
+        e.style.marginTop = '0px';
+      }
+    });
   }
 
 }
