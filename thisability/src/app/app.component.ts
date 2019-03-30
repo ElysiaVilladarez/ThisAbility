@@ -20,20 +20,20 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     const element = document.getElementById('header');
-    element.classList.add('sticky');
+    // element.classList.add('sticky');
     //  if (window.pageYOffset > 0) {
     //    element.classList.add('sticky');
     //  } else {
     //   element.classList.remove('sticky');
     //  }
-    let scrollTop = $(document).scrollTop();
+    // let scrollTop = $(document).scrollTop();
 
-    if ( scrollTop < 0 ) {
-        scrollTop = 0;
-    }
-    if ( scrollTop > $('body').height() - $(window).height() ) {
-        scrollTop = $('body').height() - $(window).height();
-    }
+    // if ( scrollTop < 0 ) {
+    //     scrollTop = 0;
+    // }
+    // if ( scrollTop > $('body').height() - $(window).height() ) {
+    //     scrollTop = $('body').height() - $(window).height();
+    // }
 
     // if (scrollTop >= this.previousScroll && scrollTop) {
     //     // scrolling down
@@ -52,26 +52,26 @@ export class AppComponent {
     //     }
     //     console.log('scrolling up');
     // }
-    const self = this;
+    // const self = this;
     // if (!scrollTop && $(element).is( ':hidden' )) {
     //   $(element).slideDown('slow', () => {});
     // } else if (scrollTop > 0 && !$(element).is( ':hidden' ) ) {
     //   $(element).slideUp('slow', () => {});
     // }
-    clearTimeout($.data(this, 'scrollTimer'));
-    $.data(this, 'scrollTimer', setTimeout(function() {
-        if (!$(element).is( ':hidden' ) && scrollTop >= self.previousScroll && scrollTop && !self.hasHiddenOnce) {
-            $(element).slideUp(500, () => {});
-            self.hasHiddenOnce = true;
-            self.hasShownOnce = false;
-        } else if ($(element).is( ':hidden' ) && (scrollTop < self.previousScroll || !scrollTop) && !self.hasShownOnce) {
-            $(element).slideDown(500, () => {});
-            self.hasHiddenOnce = false;
-            self.hasShownOnce = true;
-        } else {
-          self.previousScroll = scrollTop;
-        }
-    }, 50));
+    // clearTimeout($.data(this, 'scrollTimer'));
+    // $.data(this, 'scrollTimer', setTimeout(function() {
+    //     if (!$(element).is( ':hidden' ) && scrollTop >= self.previousScroll && scrollTop && !self.hasHiddenOnce) {
+    //         $(element).slideUp(500, () => {});
+    //         self.hasHiddenOnce = true;
+    //         self.hasShownOnce = false;
+    //     } else if ($(element).is( ':hidden' ) && (scrollTop < self.previousScroll || !scrollTop) && !self.hasShownOnce) {
+    //         $(element).slideDown(500, () => {});
+    //         self.hasHiddenOnce = false;
+    //         self.hasShownOnce = true;
+    //     } else {
+    //       self.previousScroll = scrollTop;
+    //     }
+    // }, 50));
 
 
     const element2 = document.getElementById('total-calculator');

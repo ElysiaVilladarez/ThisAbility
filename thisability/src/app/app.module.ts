@@ -17,6 +17,9 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleAnalyticsService } from './services/ga/google-analytics.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeadroomModule } from '@ctrl/ngx-headroom';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { GoogleAnalyticsService } from './services/ga/google-analytics.service';
     AppRoutingModule,
     ReactiveFormsModule,
     TextMaskModule,
-    NgbTooltipModule
+    NgbTooltipModule,
+    BrowserAnimationsModule,
+    HeadroomModule
   ],
   providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent]
