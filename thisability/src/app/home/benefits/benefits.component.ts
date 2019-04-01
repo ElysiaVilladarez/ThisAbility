@@ -44,11 +44,11 @@ export class BenefitsComponent implements OnInit {
       caption: 'Domestic Air and Sea Travel'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-train.png',
       caption: 'Public Railways, Skyways,<br>and Other Public Utility<br>Vehicles'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/benefits-funeral.png',
       caption: 'Funeral and Burial Services<br>for the Death of the PWD'
     }];
 
