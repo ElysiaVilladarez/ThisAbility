@@ -16,19 +16,19 @@ export class RegistrationProcessComponent implements OnInit {
     this.ga.sendPageTracking('Registration_Process', '/registration-process');
 
     this.whatToBringArray = [{
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/what-to-bring-1.png',
       caption: 'Application Form'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/what-to-bring-2.png',
       caption: 'Two 2x2 ID Photos'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/what-to-bring-3.png',
       caption: 'Barangay Clearance, Voter’s ID, or Any Government-issued ID'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/what-to-bring-4.png',
       caption: 'Medical Certificate/ Clinical Abstract'
     }];
 
