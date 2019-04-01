@@ -14,6 +14,7 @@ export class RegistrationProcessComponent implements OnInit {
 
   ngOnInit() {
     this.ga.sendPageTracking('Registration_Process', '/registration-process');
+
     this.whatToBringArray = [{
       imgUrl: '../../../assets/bg-placeholder.png',
       caption: 'Application Form'
