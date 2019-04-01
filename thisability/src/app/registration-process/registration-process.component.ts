@@ -16,7 +16,7 @@ export class RegistrationProcessComponent implements OnInit {
     this.ga.sendPageTracking('Registration_Process', '/registration-process');
     this.whatToBringArray = [{
       imgUrl: '../../../assets/bg-placeholder.png',
-      caption: 'Application Form (Download from the Link Above)'
+      caption: 'Application Form'
     },
     {
       imgUrl: '../../../assets/bg-placeholder.png',
