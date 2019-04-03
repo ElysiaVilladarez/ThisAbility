@@ -10,7 +10,7 @@
         <div class="row full-height vertical-center">
           <div class="col-md-10 padding-all-sm">
             <a href="../../../assets/forms/PWD_Form.pdf" class="black text-small float-right Poppins-700 margin-left-md" download (click)="downloadForm()">DOWNLOAD FORM</a><br>
-            <a href=";" class="black text-small float-right Poppins-700 margin-left-md" (click)="downloadChecklist()">DOWNLOAD CHECKLIST</a>
+            <a href="../../../assets/forms/Checklist.pdf" class="black text-small float-right Poppins-700 margin-left-md" download (click)="downloadChecklist()">DOWNLOAD CHECKLIST</a>
           </div>
           <div class="col-md-1 padding-all-sm full-height">
             <!-- <div class="full-height bg-red download-links"></div> -->
@@ -70,13 +70,7 @@
     </div>
 
   <div class="steps" *ngFor="let c of stepsArray; let i = index;">
-      <div class="row margin-top-xxxl margin-bottom-md">
-          <div class="offset-md-4 col-md-4 text-center">
-            <h1 class="red text-xxl margin-bottom-md">{{ (i+1) }}</h1>
-            <label class="text-sm Poppins-200">{{ c.caption }}</label>
-          </div>
-      </div>
-    <!-- <div class="row margin-top-xl margin-bottom-md" *ngIf="(i%2 === 0)">
+    <div class="row margin-top-xl margin-bottom-md" *ngIf="(i%2 === 0)">
         <div class="offset-md-2 col-md-6">
             <img src="{{c.imgUrl}}">
         </div>
@@ -98,7 +92,7 @@
         <div class="col-md-6">
           <img src="{{c.imgUrl}}">
         </div>
-    </div> -->
+    </div>
   </div>
 
       <div class="row margin-top-xxxl margin-bottom-xxxl">

@@ -33,15 +33,15 @@ export class RegistrationProcessComponent implements OnInit {
     }];
 
     this.stepsArray = [{
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/steps-1.png',
       caption: 'Bring the aforementioned requirements.'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/steps-2.png',
       caption: 'Fill up the application form and affix your photo.'
     },
     {
-      imgUrl: '../../../assets/bg-placeholder.png',
+      imgUrl: '../../../assets/img/steps-3.png',
       caption: 'You will be guided through verification of requirements, encoding of information, and issuance of your ID.'
     }];
 
