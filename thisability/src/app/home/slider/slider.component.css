@@ -11,7 +11,7 @@
   position: relative;
   text-align: center;
   color: white;
-  min-height: 725px;
+  /* min-height: 725px; */
   background-color: #fff7e6;
 }
 
@@ -70,4 +70,24 @@
 .fb-icon {
   height:50px;
   width:50px
+}
+
+
+.slider-mobile {
+  color: white;
+  min-height: 725px;
+}
+
+.slider-mobile img.landing-img {
+  height: 330px;
+}
+
+.right-crop {
+  width: 110%; /* or whatever is required */
+  text-align: center; /* ensures the image is always in the h-middle */
+  overflow: hidden; /* hide the cropped portion */
+}
+
+.magna-slider-mobile img {
+  width: 100%;
 }
