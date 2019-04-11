@@ -1,17 +1,17 @@
 <div class="row margin-top-sm margin-bottom-md">
-  <div class="col-md-5 padding-right-sm padding-left-sm margin-bottom-sm">
+  <div class="col-5 col-xs-5 col-md-5 padding-right-sm padding-left-sm margin-bottom-sm">
     <input autocomplete="off"  type="text" class="rounded-edges border-cream">
   </div>
-  <div class="col-md-3 padding-right-sm padding-left-sm margin-bottom-sm">
+  <div class="col-3 col-xs-3 col-md-3 padding-right-sm padding-left-sm margin-bottom-sm">
       <input autocomplete="off" [textMask]="{ mask: currencyMask }" class="rounded-edges border-cream" (keyup)="onPriceChanged($event)">
     </div>
-  <div class="col-md-3 padding-right-sm padding-left-sm margin-bottom-sm">
+  <div class="col-3 col-xs-3 col-md-3 padding-right-sm padding-left-sm margin-bottom-sm">
       <input appNonZero autocomplete="off"  id="item-count" [textMask]="{ mask: numberMask }" class="rounded-edges border-cream"
       value="{{ itemCountDisplay }}" (keyup)="onCountChanged($event)">
       <i class="fa fa-chevron-up light-gray pointer" aria-hidden="true" (click)="increaseCount()"></i>
       <i class="fa fa-chevron-down light-gray pointer" aria-hidden="true" (click)="decreaseCount()"></i>
     </div>
-  <div class="col-md-1 padding-right-sm padding-left-sm center">
+  <div class="col-1 col-xs-1 col-md-1 padding-right-sm padding-left-sm center">
     <i class="fa fa-2x fa-minus-circle red pointer" aria-hidden="true" (click)="removeRow()"></i>
     </div>
 </div>

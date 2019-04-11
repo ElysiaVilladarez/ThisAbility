@@ -1,13 +1,13 @@
 <div class="row margin-bottom-xl">
   <div class="offset-md-1 col-md-10">
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row padding-left-md padding-right-md">
+        <div class="col-xs-4 col-md-4">
             <a class="red text-sm" routerLink="{{ footerLink.routerLinkLeft }}">
                 <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left" aria-hidden="true"></i>
               {{ footerLink.labelLeft }}
             </a>
         </div>
-        <div class="offset-md-4 col-md-4">
+        <div class="offset-md-4 offset-xs-5 col-xs-2 col-md-4">
             <a class="red text-sm float-right" routerLink="{{ footerLink.routerLinkRight }}">
               {{ footerLink.labelRight }}
               <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right" aria-hidden="true"></i>

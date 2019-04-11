@@ -5,9 +5,17 @@ export class Helper {
   public static fbLink = `https://www.facebook.com/ThisAbility-433169680560193/`;
 
   goToAbout() {
-    $('html, body').animate({
-      scrollTop: parseInt($('#about').offset().top, 10)
-    }, 1000);
+    const aboutDesktop = $('#about');
+    const aboutMobile = $('#about-mobile');
+    if (aboutDesktop.is(':visible')) {
+      $('html, body').animate({
+        scrollTop: parseInt(aboutDesktop.offset().top, 10)
+      }, 1000);
+    } else {
+      $('html, body').animate({
+        scrollTop: parseInt(aboutMobile.offset().top, 10)
+      }, 1000);
+    }
   }
 
   scrollToTop() {

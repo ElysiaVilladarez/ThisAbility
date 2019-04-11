@@ -1,5 +1,32 @@
+<div id="side-nav" class="sidenav bg-cream text-center">
+    <div class="row margin-top-xxl margin-bottom-xxxl">
+        <div class="offset-md-3 col-md-6 collapsable">
+            <img src="../../assets/img/logo-red.png" class="logo pointer" (click)="goToHome()"/>
+            <br>
+            <img src="../../assets/img/brand-red.png" class="brand pointer margin-bottom-xl" (click)="goToHome()"/>
+        </div>
+    </div>
+  <div class="row margin-top-xxxl">
+      <div class="col-md-12">
+          <label class="red text-xs pointer" (click)="goToAbout()">ABOUT</label>
+        </div>
+  </div>
+  <div class="row margin-top-xxxl">
+      <div class="col-md-12">
+          <a class="red text-xs" routerLink="/calculator">DISCOUNT CALCULATOR</a>
+      </div>
+  </div>
+  <div class="row margin-top-xxxl">
+      <div class="col-md-12">
+          <a class="red text-xs" routerLink="/registration-process">REGISTRATION PROCESS</a>
+        </div>
+  </div>
+</div>
+<div id="overlay"></div>
+
+
 <ngx-headroom>
-<div id="header" class="bg-cream">
+<div id="header" class="bg-cream d-none d-md-block">
   <div class="container-fluid max-height">
       <div class="row max-height center-vertical">
           <div class="offset-md-1 col-md-5">
@@ -20,6 +47,23 @@
             </div>
           </div>
         </div>
+  </div>
+</div>
+<div id="header-mobile" class="bg-cream d-md-none">
+  <div class="row">
+    <div class="col-2 col-sm-2">
+        <a class="margin-all-lg vertical-center pointer" (click)="openNav()"><i class="fa-3x fa fa-bars red" aria-hidden="true"></i></a>
+    </div>
+    <div class="col-8 col-sm-8">
+      <div class="vertical-center full-height text-center brand-container">
+        <img src="../../assets/img/brand-red.png" class="brand pointer" (click)="goToHome()"/>
+      </div>
+    </div>
+    <div class="col-2 col-sm-2">
+      <div class="margin-top-lg margin-right-lg text-center">
+          <img src="../../assets/img/logo-outline-red-only.png" class="logo pointer" (click)="goToHome()"/>
+      </div>
+    </div>
   </div>
 </div>
 </ngx-headroom>

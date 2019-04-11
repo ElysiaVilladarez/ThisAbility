@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
       if (event instanceof NavigationEnd) {
           this.helper.scrollToTop();
+          this.closeNav();
           // Hide loading indicator
           switch (event.url) {
             case '/calculator': {
@@ -45,6 +46,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
           console.log(event.error);
       }
     });
+
+    $('#overlay').unbind('click').on('click', () => {
+      this.closeNav();
+    });
   }
 
   ngAfterViewInit() {
@@ -62,4 +67,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.router.navigateByUrl('/about');
   }
 
+  openNav() {
+    $('#side-nav').css('width', '80%');
+    $('#overlay').show();
+  }
+
+  closeNav() {
+    $('#side-nav').css('width', '0');
+    $('#overlay').hide();
+  }
 }

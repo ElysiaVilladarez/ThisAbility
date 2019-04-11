@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="row text-center margin-top-md" id="downloads">
-      <div class="col-md-2">
+      <div class="d-none d-md-block col-md-2">
         <div class="row full-height vertical-center">
           <div class="col-md-10 padding-all-sm">
             <a href="../../../assets/forms/PWD_Form.pdf" class="black text-small float-right Poppins-700 margin-left-md" download (click)="downloadForm()">DOWNLOAD FORM</a><br>
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="row text-center  margin-top-xxxl">
+    <div class="row text-center margin-top-xxxl">
         <div class="col-md-12">
           <h1 class="text-xl red">What to Bring</h1>
         </div>
@@ -32,7 +32,7 @@
   <div class="row what-to-bring margin-top-xl">
     <div *ngFor="let c of whatToBringArray; let i = index;" class="col-md-3 margin-bottom-xxl" [ngClass]="{'offset-md-3': i%2 === 0}">
       <div class="text-center">
-        <img src="{{c.imgUrl}}">
+        <img class="padding-all-xl" src="{{c.imgUrl}}">
         <h4 class="text-sm margin-top-xl margin-bottom-sm Poppins-700">{{c.caption}}</h4>
       </div>
     </div>
@@ -48,14 +48,14 @@
 <div class="row margin-top-xl where-to-go">
     <div class="offset-md-2 col-md-8">
         <div class="row margin-top-xl">
-            <div *ngFor="let c of whereToGoArray;" class="col-md-6 margin-bottom-xl padding-right-sm padding-left-sm">
-              <div class="row">
-                <div class="offset-1 col-md-2 vertical-center">
+            <div *ngFor="let c of whereToGoArray;" class="col-md-6 margin-bottom-xl padding-right-sm padding-left-sm text-center">
+              <div class="row margin-bottom-xl">
+                <div class="offset-md-1 col-xs-2 col-md-2 vertical-center">
                     <!-- <i class="fa fa-4x red fa-map-marker" aria-hidden="true"></i> -->
                     <img class="location-icon" src="../../assets/img/location-icon.png">
                 </div>
                 <div class="col-md-8 vertical-center padding-all-sm">
-                    <label class="text-sm Poppins-300 padding-left-md" innerHtml="{{c}}">{{ c }}</label>
+                    <label class="text-sm Poppins-300 padding-left-lg padding-right-lg" innerHtml="{{c}}">{{ c }}</label>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
       </div>
     </div>
 
-  <div class="steps" *ngFor="let c of stepsArray; let i = index;">
+  <div class="steps d-none d-md-block" *ngFor="let c of stepsArray; let i = index;">
     <div class="row margin-top-xl margin-bottom-md" *ngIf="(i%2 === 0)">
         <div class="offset-md-2 col-md-6">
             <img src="{{c.imgUrl}}">
@@ -94,6 +94,32 @@
         </div>
     </div>
   </div>
+
+  <div class="d-md-none steps-mobile" *ngFor="let c of stepsArray; let i = index;">
+      <div class="row margin-top-xl margin-bottom-md" *ngIf="(i%2 === 0)">
+          <div class="offset-md-2 col-md-6 margin-bottom-md">
+              <img src="{{c.imgUrl}}">
+          </div>
+          <div class="col-md-2">
+            <div class="caption">
+              <h1 class="red text-xxl margin-bottom-md">{{ (i+1) }}</h1>
+              <label class="text-sm Poppins-200 margin-left-md padding-right-lg">{{ c.caption }}</label>
+            </div>
+          </div>
+      </div>
+
+      <div class="row margin-top-xl margin-bottom-md" *ngIf="(i%2 !== 0)">
+          <div class="col-md-6">
+              <img src="{{c.imgUrl}}">
+            </div>
+          <div class="offset-md-2 col-md-2">
+            <div class="caption padding-right-md">
+                <label class="text-sm Poppins-200 text-right margin-right-xxl padding-right-md">{{ c.caption }}</label>
+                <h1 class="red text-xxl margin-bottom-md text-right float-right">{{ (i+1) }}</h1>
+              </div>
+          </div>
+      </div>
+    </div>
 
       <div class="row margin-top-xxxl margin-bottom-xxxl">
           <div class="offset-md-2 col-md-12">
