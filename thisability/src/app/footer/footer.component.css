@@ -11,7 +11,38 @@
 .center-vertical {
   align-items: center;
 }
-.fb-icon {
-  height:38px;
-  width:38px
+
+
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+  .fb-icon {
+    height:26px;
+    width:26px
+  }
+
+  .logo {
+    width:24px;
+    height: 32px;;
+  }
+
+  .brand {
+    width:82px;
+    height: 9px;;
+  }
+}
+
+@media only screen
+and (min-width : 769px){
+  .fb-icon {
+    height:38px;
+    width:38px
+  }
+
 }

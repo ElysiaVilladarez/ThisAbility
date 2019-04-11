@@ -67,12 +67,6 @@
   top: 17%;
 }
 
-.fb-icon {
-  height:50px;
-  width:50px
-}
-
-
 .slider-mobile {
   color: white;
   min-height: 725px;
@@ -90,4 +84,26 @@
 
 .magna-slider-mobile img {
   width: 100%;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+  .fb-icon {
+    height:45px;
+    width:45px
+  }
+
+}
+
+@media only screen
+and (min-width : 769px){
+  .fb-icon {
+    height:50px;
+    width:50px
+  }
+
+
 }

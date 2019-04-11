@@ -1,17 +1,29 @@
 <div class="row margin-bottom-xl">
   <div class="offset-md-1 col-md-10">
     <div class="row padding-left-md padding-right-md">
-        <div class="col-xs-4 col-md-4">
-            <a class="red text-sm" routerLink="{{ footerLink.routerLinkLeft }}">
+        <div class="col-5 col-xs-5 col-md-4">
+          <div class="row">
+            <div class="offset-1 col-xs-1 col-1 vertical-center">
                 <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left" aria-hidden="true"></i>
-              {{ footerLink.labelLeft }}
-            </a>
+            </div>
+            <div class="col-xs-9 col-9">
+                <a class="red text-sm" routerLink="{{ footerLink.routerLinkLeft }}">
+                    {{ footerLink.labelLeft }}
+                  </a>
+            </div>
+          </div>
         </div>
-        <div class="offset-md-4 offset-xs-5 col-xs-2 col-md-4">
-            <a class="red text-sm float-right" routerLink="{{ footerLink.routerLinkRight }}">
-              {{ footerLink.labelRight }}
-              <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right" aria-hidden="true"></i>
-            </a>
+        <div class="offset-md-4 offset-xs-2 offset-2 col-xs-5 col-5 col-md-4">
+            <div class="row">
+                <div class="col-xs-9 col-9 text-right">
+                    <a class="red text-sm" routerLink="{{ footerLink.routerLinkRight }}">
+                        {{ footerLink.labelRight }}
+                      </a>
+                </div>
+                <div class="col-xs-1 col-1 vertical-center">
+                    <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right" aria-hidden="true"></i>
+                </div>
+              </div>
         </div>
     </div>
   </div>
@@ -20,7 +32,7 @@
 <div class="footer bg-cream">
     <div class="container-fluid max-height">
         <div class="row max-height center-vertical">
-            <div class="offset-md-1 col-md-5">
+            <div class="offset-md-1 col-10 col-xs-10 col-md-5">
               <div class="row">
                 <div class="col-md-12">
                     <img src="../../assets/img/logo-red.png" class="logo margin-right-sm pointer" (click)="goToHome()"/>
@@ -33,7 +45,7 @@
                   </div>
               </div>
              </div>
-            <div class="offset-md-3 col-md-2">
+            <div class="offset-md-3 col-2 col-xs-2 col-md-2">
               <div class="row margin-top-md">
                 <div class="col-md-12">
                   <img src="../../assets/img/fb-icon-red.png" class="fb-icon float-right pointer" (click)="redirectToFBPage()">
