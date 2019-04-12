@@ -3,6 +3,7 @@ import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 import { Router } from '@angular/router';
 import { GoogleAnalyticsService } from '../../services/ga/google-analytics.service';
 
+declare var $: any;
 
 @Component({
   selector: 'app-calculator-list',
@@ -13,11 +14,6 @@ export class CalculatorListComponent implements OnInit {
   calculatorArray = null;
   totalExpenses = 0;
   discountedExpenses = 0;
-
-  expensesTooltip = 'your total monthly expenses per category';
-  discountedTooltip = 'your discounted expenses per category';
-  totalExpensesTooltip = 'your overall expenses for the whole month';
-  discountedExpensesTooltip = 'your overall expenses if discounted';
 
   displayedTotalExpenses = '0';
   displayedDiscountedExpenses = '0';
@@ -95,5 +91,13 @@ export class CalculatorListComponent implements OnInit {
     } else {
       tooltip.open({greeting});
     }
+  }
+
+  showTotalCalculatorModal() {
+    $('#total-calculator-modal').modal('show');
+  }
+
+  closeCalculatorModal() {
+    $('#total-calculator-modal').modal('hide');
   }
 }

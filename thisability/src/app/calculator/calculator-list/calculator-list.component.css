@@ -2,25 +2,6 @@
   z-index: 30;
 } */
 
-#total-calculator input {
-  width: 100%;
-  border-radius: 15px;
-  border: none;
-  background-color: white;
-}
-
-#total-calculator input.small {
-  height: 33px;
-}
-
-#total-calculator input.big {
-  height: 42px;
-}
-
-#total-calculator hr {
-  border-top: solid 1px;
-}
-
 .discount-calculator {
   background-image: linear-gradient(#FFF9F2, white);
 }
@@ -63,12 +44,8 @@
   width: 200px;
 } */
 
-::ng-deep .tooltip.show {
-  width: 200px;
-}
 
-::ng-deep .tooltip-inner {
-  padding: 5px;
-  font-size: 14px;
-  z-index: 300px !important;
+.modal-content {
+  background: rgba(0,0,0,0.0);
+  border: none;
 }

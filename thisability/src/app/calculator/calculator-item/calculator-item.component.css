@@ -8,3 +8,16 @@
   width: 100%;
   left: 0;
 }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+  .text-xl {
+    font-size: 40px;
+  }
+
+}
+
+@media only screen
+and (min-width : 769px){
+
+}

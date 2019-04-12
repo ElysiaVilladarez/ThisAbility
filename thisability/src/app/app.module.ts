@@ -20,6 +20,7 @@ import { GoogleAnalyticsService } from './services/ga/google-analytics.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadroomModule } from '@ctrl/ngx-headroom';
 import { NonZeroDirective } from './directives/non-zero/non-zero.directive';
+import { TotalCalculatorComponent } from './calculator/total-calculator/total-calculator.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { NonZeroDirective } from './directives/non-zero/non-zero.directive';
     CalculatorListComponent,
     CalculatorItemComponent,
     CalculatorRowComponent,
-    NonZeroDirective
+    NonZeroDirective,
+    TotalCalculatorComponent
   ],
   imports: [
     BrowserModule,

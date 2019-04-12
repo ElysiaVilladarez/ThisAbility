@@ -1,0 +1,56 @@
+<div id="total-calculator" >
+  <div class="bg-red card margin-top-sm padding-all-xl">
+      <i *ngIf="isModal" class="fa fa-2x fa-times-circle yellow pointer" aria-hidden="true" (click)="closeCalculatorModal()"></i>
+    <div class="row margin-bottom-md">
+        <h4 class="col-md-12 text-center Rubik-700 white text-lg tracking-wide">
+          Monthly Expenses
+        </h4>
+      </div>
+    <div class="row">
+      <h4 class="offset-md-1 offset-xs-1 offset-1 col-5 col-xs-5 col-md-5 Poppins-600 white text-sm">EXPENSES
+        <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="{{ expensesTooltip }}"  placement="bottom"></i>
+      </h4>
+      <h4 class="col-6 col-xs-6 col-md-6 Poppins-600 white text-sm">DISCOUNTED <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="{{ discountedTooltip }}" placement="bottom"></i></h4>
+    </div>
+    <div class="margin-top-md" *ngFor="let c of calculatorArray; let i = index;">
+      <div class="row margin-bottom-xs">
+        <div class="offset-md-1 offset-1 col-5 col-xs-5 col-md-5">
+            <label class="Poppins-200 text-xs white small" [textMask]="{ mask: currencyMask }">{{ c.label }}</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 offset-1 col-5 col-xs-5 col-md-5">
+            <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.total.toLocaleString() }}">
+        </div>
+        <div class="col-5 col-xs-5 col-md-5">
+            <input class="text-xs Poppins-700 small text-center tracking-wide" [textMask]="{ mask: currencyMask }" readonly disabled value="{{ c.discount.toLocaleString() }}">
+        </div>
+      </div>
+    </div>
+    <div class="row margin-top-sm margin-bottom-sm">
+      <div class="offset-md-1 col-md-10">
+        <hr class="white">
+      </div>
+    </div>
+    <div class="row text-center">
+        <div class="offset-md-1 col-md-10">
+            <h4 class="Poppins-600 white text-xs tracking-wide">TOTAL EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="{{ totalExpensesTooltip }}"></i></h4>
+        </div>
+    </div>
+    <div class="row margin-top-sm margin-bottom-lg">
+        <div class="offset-md-1 col-md-10">
+            <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedTotalExpenses}}">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h4 class="Poppins-600 white text-xs tracking-wide">DISCOUNTED EXPENSES <i class="fa fa-question-circle yellow" aria-hidden="true" ngbTooltip="{{ discountedExpensesTooltip }}"></i></h4>
+        </div>
+    </div>
+    <div class="row margin-top-sm margin-bottom-lg">
+        <div class="offset-md-1 col-md-10">
+            <input class="text-xs Poppins-700 big text-center" readonly disabled value="{{ displayedDiscountedExpenses}}">
+        </div>
+    </div>
+  </div>
+  </div>
