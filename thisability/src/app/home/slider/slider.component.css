@@ -17,6 +17,7 @@
 
 .slider img.landing-img {
   width: 100%;
+  min-height: 500px;
   /* height: 100%; */
 }
 
@@ -48,7 +49,7 @@
 }
 
 .magna {
-  min-height: 725px;
+  min-height: 600px;
 }
 
 .magna-slider img {

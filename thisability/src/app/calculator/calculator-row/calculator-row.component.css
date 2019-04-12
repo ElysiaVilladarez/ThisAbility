@@ -1,28 +1,60 @@
-input {
-  padding: 18px 25px 18px 25px;
-  letter-spacing: 2px;
-  width: 100%
-}
+
 
 .center {
   display: flex;
   margin: auto;
 }
 
-.fa-chevron-up, .fa-chevron-down {
-  position: absolute;
-  font-size: 0.7rem;
-  margin-left: -30px;
-}
-
-.fa-chevron-up {
-  margin-top: 17px;
-}
-
-.fa-chevron-down {
-  margin-top: 33px;
-}
 
 .fa-chevron-up:hover, .fa-chevron-down:hover {
   color: black
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width: 768px) {
+  input {
+    padding: 10px 15px 10px 15px;
+    letter-spacing: 1px;
+    width: 100%
+  }
+
+  .fa-chevron-up, .fa-chevron-down {
+    position: absolute;
+    font-size: 0.7rem;
+    margin-left: -20px;
+  }
+
+  .fa-chevron-up {
+    margin-top: 15%;
+  }
+
+  .fa-chevron-down {
+    margin-top: 40%;
+  }
+
+}
+
+@media only screen
+and (min-width : 769px){
+  input {
+    padding: 18px 25px 18px 25px;
+    letter-spacing: 2px;
+    width: 100%
+  }
+
+  .fa-chevron-up, .fa-chevron-down {
+    position: absolute;
+    font-size: 0.7rem;
+    margin-left: -30px;
+  }
+
+  .fa-chevron-up {
+    margin-top: 17px;
+  }
+
+  .fa-chevron-down {
+    margin-top: 33px;
+  }
 }

@@ -1,27 +1,31 @@
 <div class="row margin-bottom-xl">
   <div class="offset-md-1 col-md-10">
     <div class="row padding-left-md padding-right-md">
-        <div class="col-5 col-xs-5 col-md-4">
+        <div class="col-6 col-xs-6 col-md-4">
           <div class="row">
-            <div class="offset-1 col-xs-1 col-1 vertical-center">
-                <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left" aria-hidden="true"></i>
+            <div class="col-xs-1 col-1 vertical-center">
+              <a routerLink="{{ footerLink.routerLinkLeft }}">
+                  <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left" aria-hidden="true"></i>
+              </a>
             </div>
-            <div class="col-xs-9 col-9">
-                <a class="red text-sm" routerLink="{{ footerLink.routerLinkLeft }}">
+            <div class="col-xs-10 col-10">
+                <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkLeft }}">
                     {{ footerLink.labelLeft }}
                   </a>
             </div>
           </div>
         </div>
-        <div class="offset-md-4 offset-xs-2 offset-2 col-xs-5 col-5 col-md-4">
+        <div class="offset-md-4 col-xs-6 col-6 col-md-4">
             <div class="row">
-                <div class="col-xs-9 col-9 text-right">
-                    <a class="red text-sm" routerLink="{{ footerLink.routerLinkRight }}">
+                <div class="col-xs-10 col-10 text-right">
+                    <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkRight }}">
                         {{ footerLink.labelRight }}
                       </a>
                 </div>
                 <div class="col-xs-1 col-1 vertical-center">
-                    <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right" aria-hidden="true"></i>
+                    <a routerLink="{{ footerLink.routerLinkRight }}">
+                      <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right" aria-hidden="true"></i>
+                    </a>
                 </div>
               </div>
         </div>
