@@ -4,9 +4,13 @@
       <h1 class="text-xl red margin-top-xxl">Discount Calculator</h1>
       <h4 class="margin-top-lg margin-bottom-sm text-lg">Still don't think it's worth it to register?</h4>
       <h4 class="margin-bottom-sm text-lg">Input your monthly expenses!</h4>
-      <label class="Poppins-300 margin-top-lg text-sm padding-left-xxxl padding-right-xxxl">Find out how much you could be saving in your groceries, transportation, medicine, and recreational expenses using the discount calculator.</label>
-      <label class="Poppins-300 margin-top-lg text-sm display-block">*Take note that there are items and services not included in the PWD discounts.</label>
-      <label class="Poppins-300 text-sm margin-top-sm">See <span class="red underline pointer" (click)="goToAbout()">benefits</span> in the about page.</label>
+    </div>
+  </div>
+  <div class="row text-center padding-left-md padding-right-md">
+    <div class="offset-md-3 col-md-6">
+        <label class="Poppins-300 margin-top-lg text-sm padding-left-md padding-right-md">Find out how much you could be saving in your groceries, transportation, medicine, and recreational expenses using the discount calculator.</label>
+        <label class="Poppins-300 margin-top-lg text-sm display-block">*Take note that there are items and services not included in the PWD discounts.</label>
+        <label class="Poppins-300 text-sm margin-top-sm">See <span class="red underline pointer" (click)="goToAbout()">benefits</span> in the about page.</label>
     </div>
   </div>
 
@@ -20,9 +24,18 @@
     <div class="offset-md-2 col-md-8">
       <div class="row">
         <div class="col-md-6 calculator-list">
-          <div class="row margin-left-md margin-right-md" *ngFor="let c of calculatorArray; let i = index;">
+          <div class="row margin-left-md margin-right-md" *ngFor="let c of calculatorArray; let i = index;" id="calculatorArray-{{i}}">
             <div class="col-md-12">
               <app-calculator-item [index]="i" [label]= "c.label" (totalPriceChanging)="computeForDiscount($event)"></app-calculator-item>
+            </div>
+          </div>
+          <div class="row margin-top-xl"  *ngIf="hasScrolledToLimit">
+            <div class="col-md-12">
+                <app-total-calculator
+                [calculatorArray]="calculatorArray"
+                [displayedDiscountedExpenses]="displayedDiscountedExpenses"
+                [displayedTotalExpenses]="displayedTotalExpenses"
+                class="d-md-none"></app-total-calculator>
             </div>
           </div>
         </div>
@@ -32,7 +45,7 @@
               <h1 class="text-xl red margin-top-md">&nbsp; </h1>
             </div>
           </div>
-          <app-total-calculator
+          <app-total-calculator id="total-calculator-sticky"
           [calculatorArray]="calculatorArray"
           [displayedDiscountedExpenses]="displayedDiscountedExpenses"
           [displayedTotalExpenses]="displayedTotalExpenses"
@@ -43,7 +56,7 @@
   </div>
 </div>
 
-<div id="total-calculator-mobile" class="d-md-none sticky-bottom margin-bottom-xxxl">
+<div *ngIf="!hasScrolledToLimit" id="total-calculator-mobile" class="d-md-none sticky-bottom margin-bottom-xxxl">
     <div class="row padding-bottom-lg padding-top-lg bg-red margin-left-md margin-right-md shadow rounded-top-edges pointer"
     (click)="showTotalCalculatorModal()">
         <h4 class="col-12 col-xs-12 text-center Rubik-700 white text-lg tracking-wide">

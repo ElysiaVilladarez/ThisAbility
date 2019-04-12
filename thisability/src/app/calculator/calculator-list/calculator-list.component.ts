@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 import { Router } from '@angular/router';
 import { GoogleAnalyticsService } from '../../services/ga/google-analytics.service';
@@ -23,6 +23,8 @@ export class CalculatorListComponent implements OnInit {
     allowDecimal: true,
     integerLimit: 5
   });
+
+  hasScrolledToLimit = false;
 
   constructor(private router: Router,
               private ga: GoogleAnalyticsService) { }
@@ -101,5 +103,16 @@ export class CalculatorListComponent implements OnInit {
   closeCalculatorModal() {
     $('#total-calculator-modal').modal('hide');
     $('#total-calculator-mobile').show();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    const $lastList = document.getElementById(`calculatorArray-${this.calculatorArray.length - 1}`);
+    const finallScrollHeight = $lastList.offsetHeight * (this.calculatorArray.length) + 200;
+    if (window.pageYOffset > finallScrollHeight) {
+      this.hasScrolledToLimit = true;
+    } else {
+      this.hasScrolledToLimit = false;
+    }
   }
 }

@@ -9,7 +9,7 @@ declare var $: any;
 })
 export class AppComponent {
   title = 'app';
-  marginTop = 25;
+  marginTop = 10;
   previousScroll = 0;
   hasShownOnce = false;
   hasHiddenOnce = false;
@@ -34,7 +34,7 @@ export class AppComponent {
         element.classList.remove('box-shadow');
      }
 
-    const element2 = document.getElementById('total-calculator');
+    const element2 = document.getElementById('total-calculator-sticky');
     if (element2) {
       const element2Height = element2.offsetHeight;
       const startOfSticky = (window.pageYOffset + element.offsetHeight);
