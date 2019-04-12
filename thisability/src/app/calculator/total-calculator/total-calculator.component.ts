@@ -8,6 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TotalCalculatorComponent implements OnInit {
   @Input() calculatorArray;
   @Input() isModal = false;
+  @Input() displayedDiscountedExpenses;
+  @Input() displayedTotalExpenses;
 
   @Output() closeModal = new EventEmitter();
 

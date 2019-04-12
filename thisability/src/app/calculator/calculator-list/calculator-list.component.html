@@ -32,7 +32,11 @@
               <h1 class="text-xl red margin-top-md">&nbsp; </h1>
             </div>
           </div>
-          <app-total-calculator [calculatorArray]="calculatorArray" class="d-none d-md-block"></app-total-calculator>
+          <app-total-calculator
+          [calculatorArray]="calculatorArray"
+          [displayedDiscountedExpenses]="displayedDiscountedExpenses"
+          [displayedTotalExpenses]="displayedTotalExpenses"
+          class="d-none d-md-block"></app-total-calculator>
         </div>
       </div>
     </div>
@@ -56,6 +60,8 @@
          <div class="modal-body">
               <app-total-calculator
               [calculatorArray]="calculatorArray"
+              [displayedDiscountedExpenses]="displayedDiscountedExpenses"
+              [displayedTotalExpenses]="displayedTotalExpenses"
               [isModal]="true"
               (closeModal)="closeCalculatorModal()"></app-total-calculator>
           </div>

@@ -95,9 +95,11 @@ export class CalculatorListComponent implements OnInit {
 
   showTotalCalculatorModal() {
     $('#total-calculator-modal').modal('show');
+    $('#total-calculator-mobile').hide();
   }
 
   closeCalculatorModal() {
     $('#total-calculator-modal').modal('hide');
+    $('#total-calculator-mobile').show();
   }
 }
