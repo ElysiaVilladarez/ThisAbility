@@ -75,4 +75,11 @@ export class CalculatorRowComponent implements OnInit {
       this.onCountChanged({ target: {value : this.itemCountDisplay }} );
     }
   }
+
+  onPriceFocus(event, selector) {
+    setTimeout(() => {
+        event.target.select();
+        // $(selector).select();
+      }, 100);
+  }
 }
