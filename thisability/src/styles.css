@@ -22,12 +22,6 @@ a.yellow:hover, a.yellow:active {
   color: #FFD20A;
 }
 
-input {
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-}
-
 body {
   background-color: #FFFFFF;
   overflow-x: hidden;
@@ -47,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   line-height: 65px;
 }
+
 
 .Rubik-500{
   font-family: 'Rubik', sans-serif;
@@ -523,6 +518,12 @@ and (max-width: 768px) {
     min-width: 100px;
     font-size: 14px;
   }
+
+  input {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+  }
 }
 
 @media only screen
@@ -570,6 +571,12 @@ and (min-width : 769px){
     min-height: 47px;
     min-width: 113px;
     font-size: 20px;
+  }
+
+  input {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
   }
 }
 

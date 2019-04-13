@@ -32,8 +32,8 @@
   <div class="row what-to-bring margin-top-xl">
     <div *ngFor="let c of whatToBringArray; let i = index;" class="col-md-3 margin-bottom-xxl" [ngClass]="{'offset-md-3': i%2 === 0}">
       <div class="text-center">
-        <img class="padding-all-xl" src="{{c.imgUrl}}">
-        <h4 class="text-sm margin-top-xl margin-bottom-sm Poppins-700">{{c.caption}}</h4>
+        <img class="padding-all-md" src="{{c.imgUrl}}">
+        <h4 class="text-sm margin-bottom-sm Poppins-700">{{c.caption}}</h4>
       </div>
     </div>
   </div>

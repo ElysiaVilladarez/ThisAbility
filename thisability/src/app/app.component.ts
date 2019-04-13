@@ -34,6 +34,21 @@ export class AppComponent {
         element.classList.remove('box-shadow');
      }
 
+     // mobile view
+
+    const elementMobile = document.getElementById('header-mobile');
+    const sliderMobileElement = document.getElementById('slider-mobile');
+    const elementArrayMobile = [sliderMobileElement];
+     if (window.pageYOffset > elementMobile.offsetHeight) {
+       this.marginnedElement(elementArrayMobile, elementMobile.offsetHeight + 'px');
+        elementMobile.classList.add('box-shadow');
+     } else if (document.querySelectorAll('.headroom--pinned').length === 1 && window.pageYOffset === 0) {
+        this.removeMarginElement(elementArrayMobile);
+        elementMobile.classList.remove('box-shadow');
+     } else {
+        elementMobile.classList.remove('box-shadow');
+     }
+
     const element2 = document.getElementById('total-calculator-sticky');
     if (element2) {
       const element2Height = element2.offsetHeight;
@@ -75,6 +90,7 @@ export class AppComponent {
   marginnedElement(elementArray: HTMLElement[], marginTop: string) {
     elementArray.forEach((e) => {
       if (e) {
+        console.log('place margin');
         e.style.marginTop = marginTop;
       }
     });
@@ -83,6 +99,7 @@ export class AppComponent {
   removeMarginElement(elementArray: HTMLElement[]) {
     elementArray.forEach((e) => {
       if (e) {
+        console.log('remove margin');
         e.style.marginTop = '0px';
       }
     });

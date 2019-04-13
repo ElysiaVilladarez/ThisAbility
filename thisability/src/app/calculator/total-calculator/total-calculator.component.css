@@ -13,6 +13,10 @@
   height: 42px;
 }
 
+#total-calculator input {
+  background-color: white;
+}
+
 #total-calculator hr {
   border-top: solid 1px;
 }
