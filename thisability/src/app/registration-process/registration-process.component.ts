@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { GoogleAnalyticsService } from '../services/ga/google-analytics.service';
 
 @Component({
@@ -62,5 +62,16 @@ export class RegistrationProcessComponent implements OnInit {
 
   downloadChecklist() {
     this.ga.sendEventTracking('Registration_Process', 'download_checklist');
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    const $downloadLink = document.getElementById(`dowload-link-mobile`);
+    const $sources = document.getElementById(`registration-process`);
+    if ($downloadLink && window.pageYOffset > $sources.clientHeight - $downloadLink.offsetHeight - 250) {
+      $downloadLink.classList.remove(`shadow-darker`);
+    } else {
+      $downloadLink.classList.add(`shadow-darker`);
+    }
   }
 }

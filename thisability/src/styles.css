@@ -472,6 +472,10 @@ img.brand {
   box-shadow: 0 1px 6px 0 rgba(0,0,0,0.05), 0 1px 6px 0 rgba(0,0,0,0.05);
 }
 
+.shadow-darker {
+  box-shadow: 0 8px 15px 0 rgba(0,0,0,0.25), 0 8px 15px 0 rgba(0,0,0,0.25);
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (max-width: 768px) {
@@ -523,6 +527,11 @@ and (max-width: 768px) {
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
+  }
+
+  h1.text-xl {
+    font-size: 45px;
+    line-height: 45px;
   }
 }
 

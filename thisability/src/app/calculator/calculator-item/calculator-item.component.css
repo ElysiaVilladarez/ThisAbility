@@ -11,10 +11,6 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (max-width: 768px) {
-  .text-xl {
-    font-size: 45px;
-    line-height: 45px;
-  }
 
 }
 
