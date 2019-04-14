@@ -1,41 +1,42 @@
-<div class="row margin-bottom-xl">
-  <div class="offset-md-1 col-md-10">
-    <div class="row">
-        <div class="col-6 col-xs-6 col-md-4">
-          <div class="row">
-            <div class="col-xs-2 col-2 vertical-center">
-              <a routerLink="{{ footerLink.routerLinkLeft }}">
-                  <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left padding-left-sm" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="col-xs-9 col-9">
-                <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkLeft }}">
-                    {{ footerLink.labelLeft }}
-                  </a>
+<div class="container">
+    <div class="row margin-bottom-xl">
+    <div class="offset-md-1 col-md-10 col-xs-12 col-12">
+      <div class="row">
+          <div class="col-6 col-xs-6 col-md-4">
+            <div class="row">
+              <div class="col-xs-2 col-2 vertical-center">
+                <a routerLink="{{ footerLink.routerLinkLeft }}">
+                    <i *ngIf="footerLink.labelLeft" class="fa red fa-chevron-left padding-left-sm" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="col-xs-9 col-9">
+                  <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkLeft }}">
+                      {{ footerLink.labelLeft }}
+                    </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-6 col-6 offset-md-4 col-md-4">
-            <div class="row">
-                <div class="col-xs-9 col-9 text-right">
-                    <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkRight }}">
-                        {{ footerLink.labelRight }}
+          <div class="col-xs-6 col-6 offset-md-4 col-md-4">
+              <div class="row">
+                  <div class="col-xs-8 col-8 text-right">
+                      <a class="red text-sm no-line-height" routerLink="{{ footerLink.routerLinkRight }}">
+                          {{ footerLink.labelRight }}
+                        </a>
+                  </div>
+                  <div class="offset-1 offset-xs-1 col-xs-2 col-2 vertical-center">
+                      <a routerLink="{{ footerLink.routerLinkRight }}">
+                        <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right padding-right-sm" aria-hidden="true"></i>
                       </a>
+                  </div>
                 </div>
-                <div class="col-xs-2 col-2 vertical-center">
-                    <a routerLink="{{ footerLink.routerLinkRight }}">
-                      <i *ngIf="footerLink.labelRight" class="fa red fa-chevron-right padding-right-sm" aria-hidden="true"></i>
-                    </a>
-                </div>
-              </div>
-        </div>
+          </div>
+      </div>
     </div>
   </div>
-
 </div>
-<div class="footer bg-cream">
+<div class="footer bg-cream container">
         <div class="row max-height center-vertical">
-            <div class="col-10 col-xs-10 offset-md-1 col-md-5">
+            <div class="col-9 col-xs-9 offset-md-1 col-md-5">
               <div class="row">
                 <div class="col-md-12">
                     <img src="../../assets/img/logo-red.png" class="logo margin-right-sm margin-left-md pointer" (click)="goToHome()"/>

@@ -14,13 +14,12 @@ export class GoogleAnalyticsService {
     });
   }
 
-  sendEventTracking(category, action, label?, value?) {
+  sendEventTracking(category, action, label?) {
     ga('send', {
       hitType: 'event',
       eventCategory: category,
       eventAction: action,
-      eventLabel: label || '',
-      eventValue: value || 0
+      eventLabel: label || ''
     });
   }
 
