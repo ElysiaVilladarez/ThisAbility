@@ -47,3 +47,12 @@ A static website made with Angular 7
 <video src="https://user-images.githubusercontent.com/11829676/226814872-c8b4420a-a81d-4a75-b77e-e903a82bf327.mov">
   </div>
 
+
+  
+  
+  
+  
+
+Developed by EJ Villadarez
+
+Designed by Sel Villadarez (https://www.selvilladarez.com/thisability)
