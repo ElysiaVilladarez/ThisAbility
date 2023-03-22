@@ -1,7 +1,8 @@
 # ThisAbility
-ThisAbility
 
-A static website informing Filipinos with disabilities of their governmental benefits
+The project sought to destigmatize conversations on mental health and encourage individuals with mental health conditions to register for a PWD ID in the Philippines. The intervention was a two-pronged approach comprising of (1) a Facebook page that disseminated essential conversation points on mental health and (2) a comprehensive website that provided vital information on the benefits and registration process for a PWD ID.
+
+A static website made with Angular 7
 
 ![01 landing-1440](https://user-images.githubusercontent.com/11829676/226808893-fa72ecc7-e8e5-4328-809f-d351d158b356.jpeg)
 
